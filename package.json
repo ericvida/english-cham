@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "imba-rollup postcss src/css/tailwind.css -o public/tailwind.css",
+    "build": "imba-rollup",
+    "style": "postcss src/css/tailwind.css -o public/tailwind.css",
     "start": "imba-rollup --watch --serve --hmr",
     "check-version": "imbac --version"
   },
