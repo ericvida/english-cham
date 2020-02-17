@@ -4,77 +4,104 @@ tag app-root
 	@query = ''
 	def render
 		<self>
-			<div
-				.{"
+			<header .{"
 					text-center
-					bg-gray-800
-					text-white
-					py-2
+					bg-blue-900
 					text-gray-100
+					text-white
+					pt-4
+					pb-16
+					tracking-wide
 				"}>
 				<div .{@containerWidth}>
-					"english-cham dictionary | {dict.length} words"
-			<header.bg-gray-900.flex.p-12>
-				<div .{@containerWidth}.flex>
-					<input[@query] #myInput 
-						.{"
-							flex-1
-							rounded-lg
-							py-2
-							px-4
-							bg-white
-							w-auto
-							shadow-xl
-						"}	placeholder="search">
+					"English - Cham Dictionary "
+					<p .{"
+						text-teal-400
+						uppercase
+						text-xs
+						font-bold
+						tracking-widest
+						"}> "{dict.length} words"
 			<main .{"
 				result
 				flex
+				flex-col
 				bg-gray-200
 				min-h-screen
-				p-12
+				px-12
+				pb-12
 				shadow-md
 				"}>
+				<div .{@containerWidth + "
+					shadow-2xl
+					py-8
+					px-8
+					rounded-lg
+					bg-teal-500
+					-mt-12
+					mb-8
+					shadow-lg
+					"}>
+					<input[@query] placeholder="search" .{"
+							flex-1
+							rounded-md
+							py-2
+							px-4
+							w-full
+							shadow-inner
+						"}>
 				<div .{@containerWidth}.flex>
-					<search-results search=@query>
+					<search-results .w-full search=@query>
 tag search-results
 	@match = true
 	def render
-		<self>
-			<div>
-				<ul>
-					for word in dict
-						if word.eng[0].toLowerCase().includes(#context.query.toLowerCase())
-							@match = true
-						elif word.eng[1] and word.eng[1].toLowerCase().includes(#context.query)
-							@match = true
-						elif word.cham[0].toLowerCase().includes(#context.query)
-							@match = true
-						else
-							@match = false
+		<self .{"
+			"}>
+			<div .{"
+				"}>
+				# <result-word english=["hello", "hi"] cham="kgoo">
+				for word in dict
+					if word.eng[0].toLowerCase().includes(#context.query.toLowerCase())
+						@match = true
+					elif word.eng[1] and word.eng[1].toLowerCase().includes(#context.query)
+						@match = true
+					elif word.cham[0].toLowerCase().includes(#context.query)
+						@match = true
+					else
+						@match = false
 
-						if @match is false
-							<result-word.hidden english=word.eng cham=word.cham>
-						else
-							<result-word.visible english=word.eng cham=word.cham>
-tag result-word < li
+					if @match is false
+						<result-word.hidden english=word.eng cham=word.cham>
+					else
+						<result-word.visible english=word.eng cham=word.cham>
+tag result-word
 	def render
-		<self
-			.{"
-				p-5
-				bg-white
-				mb-2
-				rounded-md
-				flex
+		<self .{"
+			py-2
+			px-4
+			bg-white
+			mb-2
+			shadow-sm
+			rounded-md
+			w-full
+			flex
+			justify-between
+
 			"}> 
-			<div.flex-1>
+			<div .{"
+				"}>
 				for e, k in @english
 					if k is 0 
 						<span> "{e}"
 					else
 						<span> ", {e}"
-			<div>
-				for c in @cham
-					<b> "{c}"
+			<div .{"
+				"}>
+				for c, k in @cham
+					if k is 0
+						<b> "{c}"
+					else
+						<b> ", {c}"
 
 ### css scoped
 
@@ -106,7 +133,7 @@ tag result-word < li
 # .result ol {
 # 	list-style-type: upper-roman
 # }
-# .result .word {
+# .result-word {
 # }
 # .partOfSpeech {
 # 	color: #ccc;
