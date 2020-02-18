@@ -1981,17 +1981,15 @@ class ResultWordComponent extends imba.tags.get('component','ImbaElement') {
 	}
 	
 	render(){
-		var t$0, c$0, b$0, d$0, v$0, t$1, b$1, d$1, v$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3;
+		var t$0, c$0, b$0, d$0, v$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3;
 		
 		t$0=this;
 		t$0.open$();
 		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
 		(v$0="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between",v$0===c$0.aj||(d$0|=2,c$0.aj=v$0));
 		((!b$0||d$0&2) && t$0.flagSelf$((c$0.aj||'')));
-		t$1 = (b$1=d$1=1,c$0.ak) || (b$1=d$1=0,c$0.ak=t$1=imba.createElement('div',2560,t$0,null,null,'ie0370096'));
-		(v$1="",v$1===c$0.am||(d$1|=2,c$0.am=v$1));
-		(d$1&2 && t$1.flag$((c$0.am||'')));
-		t$2 = c$0.an || (c$0.an = t$2 = imba.createKeyedFragment(1024,t$1));
+		t$1 = c$0.ak || (c$0.ak = t$1=imba.createElement('div',2048,t$0,null,null,'ie0370096'));
+		t$2 = c$0.al || (c$0.al = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
 		for (let k = 0, items = iter$$5(this.english), len = items.length, e; k < len; k++) {
@@ -1999,25 +1997,23 @@ class ResultWordComponent extends imba.tags.get('component','ImbaElement') {
 			
 			if (k === 0) {
 				
+				k$3='am$' + k$2;
+				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('span',4096,t$2,null,null,'ie0370096'));
+				b$3||(t$3.up$=t$2);
+				c$3=t$3.$am || (t$3.$am={});
+				(v$3=("" + e),v$3===c$3.an || (c$3.an_ = t$3.insert$(c$3.an=v$3,0,c$3.an_)));
+				t$2.push(t$3,k$2++,k$3);
+			} else {
+				
 				k$3='ao$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('span',4096,t$2,null,null,'ie0370096'));
 				b$3||(t$3.up$=t$2);
 				c$3=t$3.$ao || (t$3.$ao={});
-				(v$3=("" + e),v$3===c$3.ap || (c$3.ap_ = t$3.insert$(c$3.ap=v$3,0,c$3.ap_)));
-				t$2.push(t$3,k$2++,k$3);
-			} else {
-				
-				k$3='aq$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('span',4096,t$2,null,null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$aq || (t$3.$aq={});
-				(v$3=(", " + e),v$3===c$3.ar || (c$3.ar_ = t$3.insert$(c$3.ar=v$3,0,c$3.ar_)));
+				(v$3=(", " + e),v$3===c$3.ap || (c$3.ap_ = t$3.insert$(c$3.ap=v$3,0,c$3.ap_)));
 				t$2.push(t$3,k$2++,k$3);
 			}		}t$2.end$(k$2);
-		t$1 = (b$1=d$1=1,c$0.as) || (b$1=d$1=0,c$0.as=t$1=imba.createElement('div',2560,t$0,null,null,'ie0370096'));
-		(v$1="",v$1===c$0.au||(d$1|=2,c$0.au=v$1));
-		(d$1&2 && t$1.flag$((c$0.au||'')));
-		t$2 = c$0.av || (c$0.av = t$2 = imba.createKeyedFragment(1024,t$1));
+		t$1 = c$0.aq || (c$0.aq = t$1=imba.createElement('div',2048,t$0,null,null,'ie0370096'));
+		t$2 = c$0.ar || (c$0.ar = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
 		for (let k = 0, items = iter$$5(this.cham), len = items.length, c; k < len; k++) {
@@ -2025,19 +2021,19 @@ class ResultWordComponent extends imba.tags.get('component','ImbaElement') {
 			
 			if (k === 0) {
 				
-				k$3='aw$' + k$2;
+				k$3='as$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('b',4096,t$2,null,null,'ie0370096'));
 				b$3||(t$3.up$=t$2);
-				c$3=t$3.$aw || (t$3.$aw={});
-				(v$3=("" + c),v$3===c$3.ax || (c$3.ax_ = t$3.insert$(c$3.ax=v$3,0,c$3.ax_)));
+				c$3=t$3.$as || (t$3.$as={});
+				(v$3=("" + c),v$3===c$3.at || (c$3.at_ = t$3.insert$(c$3.at=v$3,0,c$3.at_)));
 				t$2.push(t$3,k$2++,k$3);
 			} else {
 				
-				k$3='ay$' + k$2;
+				k$3='au$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('b',4096,t$2,null,null,'ie0370096'));
 				b$3||(t$3.up$=t$2);
-				c$3=t$3.$ay || (t$3.$ay={});
-				(v$3=(", " + c),v$3===c$3.az || (c$3.az_ = t$3.insert$(c$3.az=v$3,0,c$3.az_)));
+				c$3=t$3.$au || (t$3.$au={});
+				(v$3=(", " + c),v$3===c$3.av || (c$3.av_ = t$3.insert$(c$3.av=v$3,0,c$3.av_)));
 				t$2.push(t$3,k$2++,k$3);
 			}		}t$2.end$(k$2);
 		t$0.close$(d$0);

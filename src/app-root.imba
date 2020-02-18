@@ -38,13 +38,13 @@ tag search-results
 tag result-word
 	def render
 		<self .{"py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between"}> 
-			<div .{""}>
+			<div>
 				for e, k in @english
 					if k is 0 
 						<span> "{e}"
 					else
 						<span> ", {e}"
-			<div .{""}>
+			<div>
 				for c, k in @cham
 					if k is 0
 						<b> "{c}"
