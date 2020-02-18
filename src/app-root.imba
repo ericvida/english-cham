@@ -4,62 +4,23 @@ tag app-root
 	@query = ''
 	def render
 		<self>
-			<header .{"
-					text-center
-					bg-blue-900
-					text-gray-100
-					text-white
-					pt-4
-					pb-16
-					tracking-wide
-				"}>
+			<header .{"text-center bg-blue-900 text-gray-100 text-white pt-4 pb-16 tracking-wide"}>
 				<div .{@containerWidth}>
 					"English - Cham Dictionary "
-					<p .{"
-						text-teal-400
-						uppercase
-						text-xs
-						font-bold
-						tracking-widest
-						"}> "{dict.length} words"
-			<main .{"
-				result
-				flex
-				flex-col
-				bg-gray-200
-				min-h-screen
-				px-12
-				pb-12
-				shadow-md
-				"}>
-				<div .{@containerWidth + "
-					shadow-2xl
-					py-8
-					px-8
-					rounded-lg
-					bg-teal-500
-					-mt-12
-					mb-8
-					shadow-lg
-					"}>
-					<input[@query] placeholder="search" .{"
-							flex-1
-							rounded-md
-							py-2
-							px-4
-							w-full
-							shadow-inner
-						"}>
+					<p .{"text-teal-400 uppercase text-xs font-bold tracking-widest"}> 
+						"{dict.length} words"
+			<main .{"result flex flex-col bg-gray-200 min-h-screen px-12 pb-12 shadow-md"}>
+				<div 
+					.{@containerWidth + "shadow-2xl py-8 px-8 rounded-lg bg-teal-500 -mt-12 mb-8 shadow-lg"}>
+					<input[@query] placeholder="search" 
+						.{"flex-1 rounded-md py-2 px-4 w-full shadow-inner"}>
 				<div .{@containerWidth}.flex>
 					<search-results .w-full search=@query>
 tag search-results
 	@match = true
 	def render
-		<self .{"
-			"}>
-			<div .{"
-				"}>
-				# <result-word english=["hello", "hi"] cham="kgoo">
+		<self>
+			<div>
 				for word in dict
 					if word.eng[0].toLowerCase().includes(#context.query.toLowerCase())
 						@match = true
@@ -76,27 +37,14 @@ tag search-results
 						<result-word.visible english=word.eng cham=word.cham>
 tag result-word
 	def render
-		<self .{"
-			py-2
-			px-4
-			bg-white
-			mb-2
-			shadow-sm
-			rounded-md
-			w-full
-			flex
-			justify-between
-
-			"}> 
-			<div .{"
-				"}>
+		<self .{"py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between"}> 
+			<div .{""}>
 				for e, k in @english
 					if k is 0 
 						<span> "{e}"
 					else
 						<span> ", {e}"
-			<div .{"
-				"}>
+			<div .{""}>
 				for c, k in @cham
 					if k is 0
 						<b> "{c}"

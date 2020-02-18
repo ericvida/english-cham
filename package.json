@@ -1,16 +1,20 @@
 {
   "scripts": {
     "build": "imba-rollup",
-    "style": "postcss src/css/tailwind.css -o public/tailwind.css",
+    "build:css": "postcss src/css/tailwind.css -o public/tailwind.css",
     "start": "imba-rollup --watch --serve --hmr",
     "check-version": "imbac --version"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
     "imba": "^2.0.0-alpha.20",
     "imba-rollup": "^1.0.3",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "purgecss": "^2.0.6"
+  }
 }
