@@ -5,8 +5,7 @@ export let dict = [
 		cham: ["k'goo"],
 		partOfSpeech: ["adverb"],
 		chapter: 1
-	},
-	{
+	},{
 		eng: ["happy"],
 		def: [""],
 		cham: ["s'bai"],
@@ -37,14 +36,14 @@ export let dict = [
 	{
 		eng: ["I", "me"],
 		def: [""],
-		cham: ["lin"],
+		cham: ["hlin"],
 		partOfSpeech: ["noun"],
 		chapter: 1
 	},
 	{
 		eng: ["emphatic particle"],
 		def: [""],
-		cham: ["men"],
+		cham: ["min"],
 		partOfSpeech: ["final particle"],
 		chapter: 1
 	},
@@ -86,7 +85,7 @@ export let dict = [
 	{
 		eng: ["what about ..."],
 		def: [""],
-		cham: ["coh"],
+		cham: ["cɑh"],
 		partOfSpeech: ["phrase"],
 		chapter: 1
 	},
@@ -131,6 +130,69 @@ export let dict = [
 		cham: ["kin oo"],
 		partOfSpeech: [""],
 		chapter: 2
+	},{
+	eng: ["instead of", "in return"],
+	cham: ["wœʔ"],
+	def: ['Like the khmer word "ving"'],
+	partOfSpeech: [""],
+	chapter: 1
+	},{
+		eng: ["please", "polite particle"],
+		cham: ["lakaw"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["nothing","something"],
+		cham: ["qeʔ"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["progressive particle"],
+		cham: ["dtɔɔʔ"],
+		def: ['Makes a word progressive'],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["go"],
+		cham: ["næw"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["laai"],
+		cham: ["where"],
+		khmer: ["naa"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["school"],
+		cham: ["s'laa"],
+		def: [''],
+		partOfSpeech: ["noun"],
+		chapter: 1
+	},{
+		cham: ["dtɔɔʔ"],
+		eng: ["stay"],
+		khmer: ["now"],
+		def: ['to Stay or to be.'],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		cham: ["maʔ"],
+		eng: ["at", "place"],
+		khmer: ["ay"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		cham: ["haang"],
+		eng: ["shop"],
+		khmer: [""],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 0
 	}
-
 ]

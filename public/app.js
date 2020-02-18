@@ -1710,8 +1710,7 @@ let dict = [
 		cham: ["k'goo"],
 		partOfSpeech: ["adverb"],
 		chapter: 1
-	},
-	{
+	},{
 		eng: ["happy"],
 		def: [""],
 		cham: ["s'bai"],
@@ -1742,14 +1741,14 @@ let dict = [
 	{
 		eng: ["I", "me"],
 		def: [""],
-		cham: ["lin"],
+		cham: ["hlin"],
 		partOfSpeech: ["noun"],
 		chapter: 1
 	},
 	{
 		eng: ["emphatic particle"],
 		def: [""],
-		cham: ["men"],
+		cham: ["min"],
 		partOfSpeech: ["final particle"],
 		chapter: 1
 	},
@@ -1791,7 +1790,7 @@ let dict = [
 	{
 		eng: ["what about ..."],
 		def: [""],
-		cham: ["coh"],
+		cham: ["cɑh"],
 		partOfSpeech: ["phrase"],
 		chapter: 1
 	},
@@ -1836,8 +1835,71 @@ let dict = [
 		cham: ["kin oo"],
 		partOfSpeech: [""],
 		chapter: 2
+	},{
+	eng: ["instead of", "in return"],
+	cham: ["wœʔ"],
+	def: ['Like the khmer word "ving"'],
+	partOfSpeech: [""],
+	chapter: 1
+	},{
+		eng: ["please", "polite particle"],
+		cham: ["lakaw"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["nothing","something"],
+		cham: ["qeʔ"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["progressive particle"],
+		cham: ["dtɔɔʔ"],
+		def: ['Makes a word progressive'],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["go"],
+		cham: ["næw"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["laai"],
+		cham: ["where"],
+		khmer: ["naa"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		eng: ["school"],
+		cham: ["s'laa"],
+		def: [''],
+		partOfSpeech: ["noun"],
+		chapter: 1
+	},{
+		cham: ["dtɔɔʔ"],
+		eng: ["stay"],
+		khmer: ["now"],
+		def: ['to Stay or to be.'],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		cham: ["maʔ"],
+		eng: ["at", "place"],
+		khmer: ["ay"],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 1
+	},{
+		cham: ["haang"],
+		eng: ["shop"],
+		khmer: [""],
+		def: [''],
+		partOfSpeech: [""],
+		chapter: 0
 	}
-
 ];
 
 imba.inlineStyles("app-root ul[data-ie0370096]{# list-style-type:none;# margin:0;# padding:0 20px;}.dictCount[data-ie0370096]{# width:100%;# text-align:center;# padding:5px;}.wordtotal[data-ie0370096]{# text-align:center;# padding:10px;}.vbox[data-ie0370096]{# background-color:white;}.results > li[data-ie0370096]{# padding:10px;# padding-left:10px;# border-bottom:1px solid whitesmoke;}.result ol[data-ie0370096]{# list-style-type:upper-roman;}.partOfSpeech[data-ie0370096]{# color:#ccc;# font-weight:light;# margin-bottom:10px;# font-size:.9rem;}.result ol li[data-ie0370096]{# margin-bottom:10px;}.word > *[data-ie0370096]{display:none;}.show[data-ie0370096]{display:inline-block;}\n# html,body{# width:100%;# height:100%;# margin:0px;# font-family:Arial;}# body{# display:block;# font-size:14px;# align-items:stretch;# justify-content:center;# flex-direction:column;# background:whitesmoke;# padding:30px;# min-height:80vh;}# body,div,form,header,footer,section,input,button,nav,aside,article{# box-sizing:border-box;}# div,section,input,ul,main,article,.grow{# flex:1 1 auto;}# input{# display:block;# padding:0px 12px;# background:transparent;# border:none;# font-size:inherit;# width:50px;# height:24px;}# header,footer{# flex:0 0 auto;# display:flex;# flex-direction:row;# justify-content:flex-start;# align-items:center;# padding:10px 6px;# background:#e8e8e8;}\n");

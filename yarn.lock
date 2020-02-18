@@ -1090,7 +1090,7 @@ ignore@^5.1.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
 
-imba-rollup@^1.0.3:
+imba-rollup@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/imba-rollup/-/imba-rollup-1.0.4.tgz#9c720647ba6448542d0384e508a1df98ba99b883"
   integrity sha512-gue2HU/yDqar5Kqysvr0U5NCzql53SO2AcnTqlTK+5TyagcTDUkJgbZOGEWTXhSVUWSqhwV/BOtXRwg8fjJIUQ==
@@ -1103,7 +1103,7 @@ imba-rollup@^1.0.3:
     rollup-plugin-node-resolve "^5.2.0"
     rollup-plugin-serve "^1.0.1"
 
-imba@^2.0.0-alpha.20, imba@^2.0.0-alpha.22:
+imba@^2.0.0-alpha.22, imba@^2.0.0-alpha.28:
   version "2.0.0-alpha.28"
   resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.28.tgz#25ebf552b4f4cd11325a503bb9c7a22a5baae2ea"
   integrity sha512-ZPMqwSQB8nS5jqDZJUnd9Zmh6pGkv93RtRpTGkM2GIHHThTOdCvGvT0F/7cFFvxCrToIKlvXer8Qi7u0jTrUew==
