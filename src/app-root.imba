@@ -1,4 +1,4 @@
-import {dict} from './dict.js'
+import {dict} from './dict.imba'
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
 	@query = ''
