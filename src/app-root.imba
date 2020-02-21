@@ -1,7 +1,6 @@
 import {dict} from './dict.imba'
 import fuzzysearch from 'fuzzysearch'
 # import fuzzy from './fuzzy.imba'
-console.log fuzzysearch('ee', "wheel")
 let search = ""
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
