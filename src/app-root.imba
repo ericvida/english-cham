@@ -1,4 +1,7 @@
 import {dict} from './dict.imba'
+import fuzzysearch from 'fuzzysearch'
+# import fuzzy from './fuzzy.imba'
+console.log fuzzysearch('ee', "wheel")
 let search = ""
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
@@ -23,7 +26,7 @@ tag search-aov
 	@state = ''
 	def render
 		<self>
-			<input[@state].{@inputClasses} placeholder="type something">
+			<input[@state].{@inputClasses}:kplaceholder="type something">
 
 tag search-aov-results
 	# Search aov results
@@ -32,7 +35,8 @@ tag search-aov-results
 		<self>
 			<ul>
 				for object in @arr
-					if object.keywords().toLowerCase().includes(@state.toLowerCase())
+					# object.keywords().toLowerCase().includes(@state.toLowerCase())
+					if fuzzysearch(@state, object.keywords())
 						<li.{@resultClasses}> 
 							<div> object.eng
 							<div> object.cham

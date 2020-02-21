@@ -58,8 +58,8 @@ class Scheduler {
 		
 		if (items.length) {
 			
-			for (let i = 0, ary = iter$(items), len = ary.length, item; i < len; i++) {
-				item = ary[i];
+			for (let i = 0, ary = iter$(items), len = ary.length; i < len; i++) {
+				let item = ary[i];
 				
 				if (typeof item === 'string' && this.listeners[item]) {
 					
@@ -193,7 +193,7 @@ class EventHandler {
 			handler: this
 		};
 		
-		for (let val, j = 0, keys = Object.keys(mods), l = keys.length, handler; j < l; j++){
+		for (let j = 0, keys = Object.keys(mods), l = keys.length, handler, val; j < l; j++){
 			handler = keys[j];val = mods[handler];
 			// let handler = part
 			if (handler.indexOf('~') > 0) {
@@ -209,8 +209,8 @@ class EventHandler {
 				
 				args = val.slice();
 				
-				for (let i = 0, items = iter$$1(args), len = items.length, par; i < len; i++) {
-					par = items[i];
+				for (let i = 0, items = iter$$1(args), len = items.length; i < len; i++) {
+					let par = items[i];
 					
 					// what about fully nested arrays and objects?
 					// ought to redirect this
@@ -220,8 +220,8 @@ class EventHandler {
 						let chain = name.split('.');
 						let value = state[chain.shift()] || event;
 						
-						for (let i = 0, ary = iter$$1(chain), len = ary.length, part; i < len; i++) {
-							part = ary[i];
+						for (let i = 0, ary = iter$$1(chain), len = ary.length; i < len; i++) {
+							let part = ary[i];
 							
 							value = value ? value[part] : undefined;
 						}						
@@ -316,7 +316,7 @@ class EventHandler {
 	}
 }
 
-var {Document,Node: Node$1,Text: Text$1,Comment: Comment$1,Element: Element$1,SVGElement,HTMLElement: HTMLElement$1,DocumentFragment,ShadowRoot: ShadowRoot$1,Event: Event$1,CustomEvent: CustomEvent$1,MouseEvent,document: document$1} = window;
+var {Document: Document,Node: Node$1,Text: Text$1,Comment: Comment$1,Element: Element$1,SVGElement: SVGElement,HTMLElement: HTMLElement$1,DocumentFragment: DocumentFragment,ShadowRoot: ShadowRoot$1,Event: Event$1,CustomEvent: CustomEvent$1,MouseEvent: MouseEvent,document: document$1} = window;
 
 function iter$$2(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function extend$$1(target,ext){
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
@@ -582,8 +582,8 @@ class KeyedTagFragment extends TagCollection {
 	
 	attachNodes(){
 		
-		for (let i = 0, items = iter$$2(this.array), len = items.length, item; i < len; i++) {
-			item = items[i];
+		for (let i = 0, items = iter$$2(this.array), len = items.length; i < len; i++) {
+			let item = items[i];
 			
 			this.__end.insertBeforeBegin$(item);
 		}		return;
@@ -591,8 +591,8 @@ class KeyedTagFragment extends TagCollection {
 	
 	detachNodes(){
 		
-		for (let i = 0, items = iter$$2(this.array), len = items.length, item; i < len; i++) {
-			item = items[i];
+		for (let i = 0, items = iter$$2(this.array), len = items.length; i < len; i++) {
+			let item = items[i];
 			
 			this.__parent.removeChild(item);
 		}		return;
@@ -664,8 +664,8 @@ class IndexedTagFragment extends TagCollection {
 	
 	attachNodes(){
 		
-		for (let i = 0, items = iter$$2(this.$), len = items.length, item; i < len; i++) {
-			item = items[i];
+		for (let i = 0, items = iter$$2(this.$), len = items.length; i < len; i++) {
+			let item = items[i];
 			
 			if (i == this.length) { break; }			this.__end.insertBeforeBegin$(item);
 		}		return;
@@ -807,7 +807,8 @@ var emit__ = function(event,args,node) {
 	
 	var prev;
 	var cb;
-	var ret;	
+	var ret;
+	
 	while ((prev = node) && (node = node.next)){
 		
 		if (cb = node.listener) {
@@ -833,7 +834,8 @@ imba$1.listen = function (obj,event,listener,path){
 	
 	var cbs;
 	var list;
-	var tail;	cbs = (__listeners___ = obj.__listeners__) || (obj.__listeners__ = {});
+	var tail;
+	cbs = (__listeners___ = obj.__listeners__) || (obj.__listeners__ = {});
 	list = cbs[event] || (cbs[event] = {});
 	tail = list.tail || (list.tail = (list.next = {}));
 	tail.listener = listener;
@@ -854,7 +856,8 @@ imba$1.once = function (obj,event,listener){
 imba$1.unlisten = function (obj,event,cb,meth){
 	
 	var node;
-	var prev;	var meta = obj.__listeners__;
+	var prev;
+	var meta = obj.__listeners__;
 	if (!(meta)) { return }	
 	if (node = meta[event]) {
 		
@@ -1071,7 +1074,8 @@ extend$$3(Element,{
 		
 		
 		var check = 'on$' + type;
-		var handler;		
+		var handler;
+		
 		// check if a custom handler exists for this type?
 		if (this[check] instanceof Function) {
 			
@@ -1119,7 +1123,8 @@ extend$$3(Element,{
 			return item;
 		} else if (type !== 'object') {
 			
-			let res;			let txt = item;
+			let res;
+			let txt = item;
 			
 			if ((f & 128) && (f & 256)) {
 				
@@ -1209,14 +1214,15 @@ imba$1.createKeyedFragment = createKeyedFragment;
 
 // Create custom tag with support for scheduling and unscheduling etc
 
-var mountedQueue;var mountedFlush = function() {
+var mountedQueue;
+var mountedFlush = function() {
 	
 	let items = mountedQueue;
 	mountedQueue = null;
 	if (items) {
 		
-		for (let i = 0, ary = iter$$3(items), len = ary.length, item; i < len; i++) {
-			item = ary[i];
+		for (let i = 0, ary = iter$$3(items), len = ary.length; i < len; i++) {
+			let item = ary[i];
 			
 			item.mounted$();
 		}	}	return;
@@ -1364,7 +1370,8 @@ imba$1.createElement = function (name,bitflags,parent,flags,text,sfc){
 imba$1.createComponent = function (name,bitflags,parent,flags,text,sfc){
 	
 	// the component could have a different web-components name?
-	var el;	
+	var el;
+	
 	if (CustomTagConstructors[name]) {
 		
 		el = CustomTagConstructors[name].create$(el);
@@ -1526,13 +1533,13 @@ extend$$4(HTMLSelectElement,{
 			
 			if (prev) {
 				
-				for (let i = 0, items = iter$$4(prev), len = items.length, value; i < len; i++) {
-					value = items[i];
+				for (let i = 0, items = iter$$4(prev), len = items.length; i < len; i++) {
+					let value = items[i];
 					if (values.indexOf(value) != -1) { continue; }					
 					bindRemove(model,value);
 				}			}			
-			for (let i = 0, items = iter$$4(values), len = items.length, value; i < len; i++) {
-				value = items[i];
+			for (let i = 0, items = iter$$4(values), len = items.length; i < len; i++) {
+				let value = items[i];
 				
 				if (!(prev) || prev.indexOf(value) == -1) {
 					
@@ -1544,14 +1551,15 @@ extend$$4(HTMLSelectElement,{
 	},
 	
 	getRichValue(){
+		var res;
 		
 		if (this.__richValue) {
 			
 			return this.__richValue;
 		}		
-		let res = [];
-		for (let i = 0, items = iter$$4(this.selectedOptions), len = items.length, o; i < len; i++) {
-			o = items[i];
+		res = [];
+		for (let i = 0, items = iter$$4(this.selectedOptions), len = items.length; i < len; i++) {
+			let o = items[i];
 			
 			res.push(o.richValue);
 		}		return this.__richValue = res;
@@ -1564,8 +1572,8 @@ extend$$4(HTMLSelectElement,{
 		if (this.multiple) {
 			
 			let vals = [];
-			for (let i = 0, items = iter$$4(this.options), len = items.length, option; i < len; i++) {
-				option = items[i];
+			for (let i = 0, items = iter$$4(this.options), len = items.length; i < len; i++) {
+				let option = items[i];
 				
 				let val = option.richValue;
 				let sel = bindHas(model,val);
@@ -1573,8 +1581,8 @@ extend$$4(HTMLSelectElement,{
 				if (sel) { vals.push(val); }			}			this.__richValue = vals;
 		} else {
 			
-			for (let i = 0, items = iter$$4(this.options), len = items.length, option; i < len; i++) {
-				option = items[i];
+			for (let i = 0, items = iter$$4(this.options), len = items.length; i < len; i++) {
+				let option = items[i];
 				
 				let val = option.richValue;
 				if (val == model) {
@@ -1712,7 +1720,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "s'bai",
 	eng: "happy",
@@ -1722,7 +1730,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "gae",
 	eng: "question particle",
@@ -1732,7 +1740,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "hhooq",
 	eng: "yes",
@@ -1742,7 +1750,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "oo",
 	eng: "not, no",
@@ -1752,7 +1760,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "lin",
 	eng: "I, me",
@@ -1762,7 +1770,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "min",
 	eng: "emphatic particle",
@@ -1772,7 +1780,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "uan  t'puan",
 	eng: "Thank you",
@@ -1782,7 +1790,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "loo",
 	eng: "much, a lot",
@@ -1792,7 +1800,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "loo loo",
 	eng: "very much",
@@ -1802,7 +1810,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "Salamualaikum",
 	eng: "hello",
@@ -1812,7 +1820,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "Alaikumsalam",
 	eng: "hello",
@@ -1822,7 +1830,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "cɑh",
 	eng: "what about ...",
@@ -1832,7 +1840,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "lakau ma.af",
 	eng: "sorry, excuse me",
@@ -1842,7 +1850,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "tai",
 	eng: "heart, spirit",
@@ -1852,7 +1860,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "s'aai",
 	eng: "brother, sister",
@@ -1862,7 +1870,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "cap",
 	eng: "strong",
@@ -1872,7 +1880,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "kin oo",
 	eng: "is not",
@@ -1882,7 +1890,7 @@ let dict = [
 	chapter: 2,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "woeq, wœq",
 	eng: "instead of, in return",
@@ -1892,7 +1900,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "lakaw",
 	eng: "please, polite particle",
@@ -1902,7 +1910,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qeq, ha'qeq, ha",
 	eng: "what ",
@@ -1912,7 +1920,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qeq qeq",
 	eng: "some things, something",
@@ -1922,7 +1930,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "dtɔɔq",
 	eng: "progressive particle",
@@ -1932,7 +1940,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "næw, naew",
 	eng: "to go",
@@ -1942,7 +1950,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "where",
 	eng: "laai",
@@ -1952,7 +1960,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "s'laa",
 	eng: "school",
@@ -1962,7 +1970,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "dtɔɔq",
 	eng: "to stay, to have left over",
@@ -1972,7 +1980,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "haa pih, pih",
 	eng: "to run out",
@@ -1982,7 +1990,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "maq",
 	eng: "at, place",
@@ -1992,7 +2000,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "haang",
 	eng: "shop",
@@ -2002,7 +2010,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "l'saai",
 	eng: "cooked rice",
@@ -2012,7 +2020,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "haang l'saai",
 	eng: "restaurant",
@@ -2022,7 +2030,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "tumnak",
 	eng: "to stay for a night or more",
@@ -2032,7 +2040,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "haang tumnak",
 	eng: "guest house",
@@ -2042,7 +2050,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "pah",
 	eng: "to rent from",
@@ -2052,7 +2060,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "k'pah",
 	eng: "to rent to",
@@ -2062,7 +2070,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "saang k'pah",
 	eng: "house for rent, hotel",
@@ -2072,7 +2080,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "jman",
 	eng: "toilet, bathroom",
@@ -2082,7 +2090,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah",
 	eng: "side",
@@ -2092,7 +2100,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "iw",
 	eng: "left",
@@ -2102,7 +2110,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "nuaq",
 	eng: "right",
@@ -2112,7 +2120,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah nuaq",
 	eng: "right side",
@@ -2122,7 +2130,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "naoq",
 	eng: "front",
@@ -2132,7 +2140,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah naoq",
 	eng: "in front of",
@@ -2142,7 +2150,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "tooq",
 	eng: "behind, the butt",
@@ -2152,7 +2160,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah tooq",
 	eng: "behind of",
@@ -2162,7 +2170,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah nii",
 	eng: "here",
@@ -2172,7 +2180,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "nii, nəy",
 	eng: "this, here",
@@ -2182,7 +2190,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qah dteh",
 	eng: "there",
@@ -2192,7 +2200,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "bpeaq",
 	eng: "to be right, to be true",
@@ -2202,7 +2210,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "how",
 	eng: "to have",
@@ -2212,7 +2220,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "how",
 	eng: "It's, It is",
@@ -2222,7 +2230,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "how",
 	eng: "to be able to",
@@ -2232,7 +2240,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "djaoq",
 	eng: "correct",
@@ -2242,7 +2250,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "p'guq",
 	eng: "work",
@@ -2252,7 +2260,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "djaoq p'guq",
 	eng: "need, need to use",
@@ -2262,7 +2270,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "hong",
 	eng: "and, with",
@@ -2272,7 +2280,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qaoq",
 	eng: "together",
@@ -2282,7 +2290,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "qaoq",
 	eng: "companion",
@@ -2292,7 +2300,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "jung, jʉng",
 	eng: "to succeed, to be able to",
@@ -2302,7 +2310,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "bəng, bung",
 	eng: "to eat",
@@ -2312,7 +2320,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "hoaq",
 	eng: "to eat",
@@ -2322,7 +2330,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "tai ai",
 	eng: "You (plural)",
@@ -2332,7 +2340,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "aai aai",
 	eng: "You (plural)",
@@ -2342,7 +2350,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "bang",
 	eng: "a time",
@@ -2352,7 +2360,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "ha'bang",
 	eng: "one time",
@@ -2362,7 +2370,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "taqueaiq",
 	eng: "again",
@@ -2372,17 +2380,17 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "myeai, mayeai, mayay",
-	eng: "",
-	khmer: "",
+	eng: "to speak, to talk",
+	khmer: "niyeay",
 	def: '',
-	partOfSpeech: "",
+	partOfSpeech: "verb",
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "geang",
 	eng: "they",
@@ -2392,7 +2400,7 @@ let dict = [
 	chapter: 2,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}},
 	{cham: "ew",
 	eng: "to be called",
@@ -2402,12 +2410,37 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.cham;
+		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
 	}}
 ];
 
+function fuzzysearch (needle, haystack) {
+  var tlen = haystack.length;
+  var qlen = needle.length;
+  if (qlen > tlen) {
+    return false;
+  }
+  if (qlen === tlen) {
+    return needle === haystack;
+  }
+  outer: for (var i = 0, j = 0; i < qlen; i++) {
+    var nch = needle.charCodeAt(i);
+    while (j < tlen) {
+      if (haystack.charCodeAt(j++) === nch) {
+        continue outer;
+      }
+    }
+    return false;
+  }
+  return true;
+}
+
+var fuzzysearch_1 = fuzzysearch;
+
 imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n# html,body{# width:100%;# height:100%;# margin:0px;# font-family:Arial;}# body{# display:block;# font-size:14px;# align-items:stretch;# justify-content:center;# flex-direction:column;# background:whitesmoke;# padding:30px;# min-height:80vh;}# body,div,form,header,footer,section,input,button,nav,aside,article{# box-sizing:border-box;}# div,section,input,ul,main,article,.grow{# flex:1 1 auto;}# input{# display:block;# padding:0px 12px;# background:transparent;# border:none;# font-size:inherit;# width:50px;# height:24px;}# header,footer{# flex:0 0 auto;# display:flex;# flex-direction:row;# justify-content:flex-start;# align-items:center;# padding:10px 6px;# background:#e8e8e8;}\n");
 function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1 = new WeakMap(), $2 = new WeakMap(), $3 = new WeakMap();
+// import fuzzy from './fuzzy.imba'
+console.log(fuzzysearch_1('ee',"wheel"));
 let search = "";
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
@@ -2501,7 +2534,7 @@ class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
 		t$1 = (b$1=d$1=1,c$0.z) || (b$1=d$1=0,c$0.z=t$1=imba.createElement('input',512,t$0,null,null,'ie0370096'));
 		v$1=c$0.aa || (c$0.aa=t$1.bind$('model',[this,'state']));
 		(v$1=this.inputClasses,v$1===c$0.ac||(d$1|=2,c$0.ac=v$1));
-		b$1 || (t$1.placeholder="type something");
+		b$1 || (t$1.on$(`kplaceholder`,{},this));
 		(d$1&2 && t$1.flag$((c$0.ac||'')));
 		b$1 || !t$1.setup || t$1.setup(d$1);
 		t$1.end$(d$1);
@@ -2527,10 +2560,11 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 		t$2 = c$0.ae || (c$0.ae = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
-		for (let i = 0, items = iter$$5(this.arr), len = items.length, object; i < len; i++) {
-			object = items[i];
+		for (let i = 0, items = iter$$5(this.arr), len = items.length; i < len; i++) {
+			let object = items[i];
 			
-			if (object.keywords().toLowerCase().includes(this.state.toLowerCase())) {
+			// object.keywords().toLowerCase().includes(@state.toLowerCase())
+			if (fuzzysearch_1(this.state,object.keywords())) {
 				
 				k$3='af$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,'ie0370096'));

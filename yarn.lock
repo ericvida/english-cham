@@ -951,6 +951,16 @@ function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+fuzzy-search@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/fuzzy-search/-/fuzzy-search-3.2.1.tgz#65d5faad6bc633aee86f1898b7788dfe312ac6c9"
+  integrity sha512-vAcPiyomt1ioKAsAL2uxSABHJ4Ju/e4UeDM+g1OlR0vV4YhLGMNsdLNvZTpEDY4JCSt0E4hASCNM5t2ETtsbyg==
+
+fuzzysearch@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/fuzzysearch/-/fuzzysearch-1.0.3.tgz#dffc80f6d6b04223f2226aa79dd194231096d008"
+  integrity sha1-3/yA9tawQiPyImqnndGUIxCW0Ag=
+
 get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
@@ -1103,10 +1113,15 @@ imba-rollup@^1.0.4:
     rollup-plugin-node-resolve "^5.2.0"
     rollup-plugin-serve "^1.0.1"
 
-imba@^2.0.0-alpha.22, imba@^2.0.0-alpha.28:
+imba@^2.0.0-alpha.22:
   version "2.0.0-alpha.28"
   resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.28.tgz#25ebf552b4f4cd11325a503bb9c7a22a5baae2ea"
   integrity sha512-ZPMqwSQB8nS5jqDZJUnd9Zmh6pGkv93RtRpTGkM2GIHHThTOdCvGvT0F/7cFFvxCrToIKlvXer8Qi7u0jTrUew==
+
+imba@^2.0.0-alpha.29:
+  version "2.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.29.tgz#3b28870dbfbc567fc58f3715803e1d3971da6f55"
+  integrity sha512-WlfmFdUOtArHi+XBMl9UtwHPBxcLrQgqIma11/oUEHC2NpRoC05Dp17pkLyGnUGQmdyi30yvYXsJ9W1nClalFA==
 
 import-cwd@^2.0.0:
   version "2.1.0"
