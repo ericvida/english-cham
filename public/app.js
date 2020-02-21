@@ -1720,7 +1720,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "s'bai",
 	eng: "happy",
@@ -1730,7 +1730,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "gae",
 	eng: "question particle",
@@ -1740,7 +1740,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "hhooq",
 	eng: "yes",
@@ -1750,7 +1750,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "oo",
 	eng: "not, no",
@@ -1760,7 +1760,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "lin",
 	eng: "I, me",
@@ -1770,7 +1770,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "min",
 	eng: "emphatic particle",
@@ -1780,7 +1780,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "uan  t'puan",
 	eng: "Thank you",
@@ -1790,7 +1790,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "loo",
 	eng: "much, a lot",
@@ -1800,7 +1800,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "loo loo",
 	eng: "very much",
@@ -1810,7 +1810,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "Salamualaikum",
 	eng: "hello",
@@ -1820,7 +1820,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "Alaikumsalam",
 	eng: "hello",
@@ -1830,7 +1830,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "cɑh",
 	eng: "what about ...",
@@ -1840,7 +1840,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "lakau ma.af",
 	eng: "sorry, excuse me",
@@ -1850,7 +1850,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "tai",
 	eng: "heart, spirit",
@@ -1860,7 +1860,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "s'aai",
 	eng: "brother, sister",
@@ -1870,7 +1870,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "cap",
 	eng: "strong",
@@ -1880,7 +1880,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "kin oo",
 	eng: "is not",
@@ -1890,7 +1890,7 @@ let dict = [
 	chapter: 2,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "woeq, wœq",
 	eng: "instead of, in return",
@@ -1900,7 +1900,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "lakaw",
 	eng: "please, polite particle",
@@ -1910,7 +1910,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qeq, ha'qeq, ha",
 	eng: "what ",
@@ -1920,7 +1920,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qeq qeq",
 	eng: "some things, something",
@@ -1930,7 +1930,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "dtɔɔq",
 	eng: "progressive particle",
@@ -1940,7 +1940,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "næw, naew",
 	eng: "to go",
@@ -1950,7 +1950,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "where",
 	eng: "laai",
@@ -1960,7 +1960,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "s'laa",
 	eng: "school",
@@ -1970,7 +1970,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "dtɔɔq",
 	eng: "to stay, to have left over",
@@ -1980,7 +1980,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "haa pih, pih",
 	eng: "to run out",
@@ -1990,7 +1990,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "maq",
 	eng: "at, place",
@@ -2000,7 +2000,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "haang",
 	eng: "shop",
@@ -2010,7 +2010,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "l'saai",
 	eng: "cooked rice",
@@ -2020,7 +2020,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "haang l'saai",
 	eng: "restaurant",
@@ -2030,7 +2030,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "tumnak",
 	eng: "to stay for a night or more",
@@ -2040,7 +2040,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "haang tumnak",
 	eng: "guest house",
@@ -2050,7 +2050,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "pah",
 	eng: "to rent from",
@@ -2060,7 +2060,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "k'pah",
 	eng: "to rent to",
@@ -2070,7 +2070,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "saang k'pah",
 	eng: "house for rent, hotel",
@@ -2080,7 +2080,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "jman",
 	eng: "toilet, bathroom",
@@ -2090,7 +2090,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah",
 	eng: "side",
@@ -2100,7 +2100,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "iw",
 	eng: "left",
@@ -2110,7 +2110,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "nuaq",
 	eng: "right",
@@ -2120,7 +2120,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah nuaq",
 	eng: "right side",
@@ -2130,7 +2130,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "naoq",
 	eng: "front",
@@ -2140,7 +2140,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah naoq",
 	eng: "in front of",
@@ -2150,7 +2150,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "tooq",
 	eng: "behind, the butt",
@@ -2160,7 +2160,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah tooq",
 	eng: "behind of",
@@ -2170,7 +2170,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah nii",
 	eng: "here",
@@ -2180,7 +2180,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "nii, nəy",
 	eng: "this, here",
@@ -2190,7 +2190,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qah dteh",
 	eng: "there",
@@ -2200,7 +2200,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "bpeaq",
 	eng: "to be right, to be true",
@@ -2210,7 +2210,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "how",
 	eng: "to have",
@@ -2220,7 +2220,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "how",
 	eng: "It's, It is",
@@ -2230,7 +2230,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "how",
 	eng: "to be able to",
@@ -2240,7 +2240,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "djaoq",
 	eng: "correct",
@@ -2250,7 +2250,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "p'guq",
 	eng: "work",
@@ -2260,7 +2260,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "djaoq p'guq",
 	eng: "need, need to use",
@@ -2270,7 +2270,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "hong",
 	eng: "and, with",
@@ -2280,7 +2280,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qaoq",
 	eng: "together",
@@ -2290,7 +2290,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "qaoq",
 	eng: "companion",
@@ -2300,7 +2300,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "jung, jʉng",
 	eng: "to succeed, to be able to",
@@ -2310,7 +2310,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "bəng, bung",
 	eng: "to eat",
@@ -2320,7 +2320,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "hoaq",
 	eng: "to eat",
@@ -2330,7 +2330,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "tai ai",
 	eng: "You (plural)",
@@ -2340,7 +2340,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "aai aai",
 	eng: "You (plural)",
@@ -2350,7 +2350,7 @@ let dict = [
 	chapter: 0,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "bang",
 	eng: "a time",
@@ -2360,7 +2360,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "ha'bang",
 	eng: "one time",
@@ -2370,7 +2370,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "taqueaiq",
 	eng: "again",
@@ -2380,7 +2380,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "myeai, mayeai, mayay",
 	eng: "to speak, to talk",
@@ -2390,7 +2390,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "geang",
 	eng: "they",
@@ -2400,7 +2400,7 @@ let dict = [
 	chapter: 2,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}},
 	{cham: "ew",
 	eng: "to be called",
@@ -2410,7 +2410,7 @@ let dict = [
 	chapter: 1,
 	keywords: function() {
 		
-		return this.eng + this.eng.replace(/['",]+/g,'') + this.cham + this.cham.replace(/['",]+/g,'');
+		return this.eng + this.cham;
 	}}
 ];
 
@@ -2476,7 +2476,9 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 		t$2 = (b$2=d$2=1,c$0.e) || (b$2=d$2=0,c$0.e=t$2=imba.createElement('div',512,t$1,null,null,'ie0370096'));
 		(v$2=this.containerWidth,v$2===c$0.g||(d$2|=2,c$0.g=v$2));
 		(d$2&2 && t$2.flag$((c$0.g||'')));
-		b$2 || t$2.insert$("English - Cham Dictionary ");
+		b$2 || (t$3=imba.createElement('a',0,t$2,null,"English - Cham Dictionary",'ie0370096'));
+		b$2 || (t$3.href="https://github.com/iamtirado/english-cham");
+		b$2 || (t$3.target="_blank");
 		t$3 = (b$3=d$3=1,c$0.h) || (b$3=d$3=0,c$0.h=t$3=imba.createElement('p',4608,t$2,null,null,'ie0370096'));
 		(v$3="text-teal-400 uppercase text-xs font-bold tracking-widest",v$3===c$0.j||(d$3|=2,c$0.j=v$3));
 		(d$3&2 && t$3.flag$((c$0.j||'')));
@@ -2564,7 +2566,7 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 			let object = items[i];
 			
 			// object.keywords().toLowerCase().includes(@state.toLowerCase())
-			if (fuzzysearch_1(this.state,object.keywords())) {
+			if (fuzzysearch_1(this.state,object.eng) || fuzzysearch_1(this.state,object.cham)) {
 				
 				k$3='af$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,'ie0370096'));

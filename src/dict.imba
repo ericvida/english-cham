@@ -6,7 +6,7 @@ export let dict = [
 	partOfSpeech: "adverb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "s'bai",
 	eng: "happy",
@@ -15,7 +15,7 @@ export let dict = [
 	partOfSpeech: "adverb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "gae",
 	eng: "question particle",
@@ -24,7 +24,7 @@ export let dict = [
 	partOfSpeech: "final particle",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "hhooq",
 	eng: "yes",
@@ -33,7 +33,7 @@ export let dict = [
 	partOfSpeech: "exclamation",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "oo",
 	eng: "not, no",
@@ -42,7 +42,7 @@ export let dict = [
 	partOfSpeech: "exclamation, adverb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "lin",
 	eng: "I, me",
@@ -51,7 +51,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "min",
 	eng: "emphatic particle",
@@ -60,7 +60,7 @@ export let dict = [
 	partOfSpeech: "final particle",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "uan  t'puan",
 	eng: "Thank you",
@@ -69,7 +69,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "loo",
 	eng: "much, a lot",
@@ -78,7 +78,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "loo loo",
 	eng: "very much",
@@ -87,7 +87,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "Salamualaikum",
 	eng: "hello",
@@ -96,7 +96,7 @@ export let dict = [
 	partOfSpeech: "phrase, greeting",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "Alaikumsalam",
 	eng: "hello",
@@ -105,7 +105,7 @@ export let dict = [
 	partOfSpeech: "response phrase",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "cɑh",
 	eng: "what about ...",
@@ -114,7 +114,7 @@ export let dict = [
 	partOfSpeech: "phrase",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "lakau ma.af",
 	eng: "sorry, excuse me",
@@ -123,7 +123,7 @@ export let dict = [
 	partOfSpeech: "phrase",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "tai",
 	eng: "heart, spirit",
@@ -132,7 +132,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "s'aai",
 	eng: "brother, sister",
@@ -141,7 +141,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "cap",
 	eng: "strong",
@@ -150,7 +150,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "kin oo",
 	eng: "is not",
@@ -159,7 +159,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 2
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "woeq, wœq",
 	eng: "instead of, in return",
@@ -168,7 +168,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "lakaw",
 	eng: "please, polite particle",
@@ -177,7 +177,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qeq, ha'qeq, ha",
 	eng: "what ",
@@ -186,7 +186,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qeq qeq",
 	eng: "some things, something",
@@ -195,7 +195,7 @@ export let dict = [
 	partOfSpeech: "phrase noun",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "dtɔɔq",
 	eng: "progressive particle",
@@ -204,7 +204,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "næw, naew",
 	eng: "to go",
@@ -213,7 +213,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "where",
 	eng: "laai",
@@ -222,7 +222,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "s'laa",
 	eng: "school",
@@ -231,7 +231,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "dtɔɔq",
 	eng: "to stay, to have left over",
@@ -240,7 +240,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "haa pih, pih",
 	eng: "to run out",
@@ -249,7 +249,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "maq",
 	eng: "at, place",
@@ -258,7 +258,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "haang",
 	eng: "shop",
@@ -267,7 +267,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "l'saai",
 	eng: "cooked rice",
@@ -276,7 +276,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "haang l'saai",
 	eng: "restaurant",
@@ -285,7 +285,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "tumnak",
 	eng: "to stay for a night or more",
@@ -294,7 +294,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "haang tumnak",
 	eng: "guest house",
@@ -303,7 +303,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "pah",
 	eng: "to rent from",
@@ -312,7 +312,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "k'pah",
 	eng: "to rent to",
@@ -321,7 +321,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "saang k'pah",
 	eng: "house for rent, hotel",
@@ -330,7 +330,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "jman",
 	eng: "toilet, bathroom",
@@ -339,7 +339,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah",
 	eng: "side",
@@ -348,7 +348,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "iw",
 	eng: "left",
@@ -357,7 +357,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "nuaq",
 	eng: "right",
@@ -366,7 +366,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah nuaq",
 	eng: "right side",
@@ -375,7 +375,7 @@ export let dict = [
 	partOfSpeech: "phrase",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "naoq",
 	eng: "front",
@@ -384,7 +384,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah naoq",
 	eng: "in front of",
@@ -393,7 +393,7 @@ export let dict = [
 	partOfSpeech: "phrase",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "tooq",
 	eng: "behind, the butt",
@@ -402,7 +402,7 @@ export let dict = [
 	partOfSpeech: "adjective, noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah tooq",
 	eng: "behind of",
@@ -411,7 +411,7 @@ export let dict = [
 	partOfSpeech: "In the back of, behind of",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah nii",
 	eng: "here",
@@ -420,7 +420,7 @@ export let dict = [
 	partOfSpeech: "phrasal noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "nii, nəy",
 	eng: "this, here",
@@ -429,7 +429,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qah dteh",
 	eng: "there",
@@ -438,7 +438,7 @@ export let dict = [
 	partOfSpeech: "phrasal noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "bpeaq",
 	eng: "to be right, to be true",
@@ -447,7 +447,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "how",
 	eng: "to have",
@@ -456,7 +456,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "how",
 	eng: "It's, It is",
@@ -465,7 +465,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "how",
 	eng: "to be able to",
@@ -474,7 +474,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	
 	---
 	cham: "djaoq",
@@ -484,7 +484,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "p'guq",
 	eng: "work",
@@ -493,7 +493,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "djaoq p'guq",
 	eng: "need, need to use",
@@ -502,7 +502,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "hong",
 	eng: "and, with",
@@ -511,7 +511,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qaoq",
 	eng: "together",
@@ -520,7 +520,7 @@ export let dict = [
 	partOfSpeech: "adjective",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "qaoq",
 	eng: "companion",
@@ -529,7 +529,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "jung, jʉng",
 	eng: "to succeed, to be able to",
@@ -538,7 +538,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "bəng, bung",
 	eng: "to eat",
@@ -547,7 +547,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "hoaq",
 	eng: "to eat",
@@ -556,7 +556,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "tai ai",
 	eng: "You (plural)",
@@ -565,7 +565,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "aai aai",
 	eng: "You (plural)",
@@ -574,7 +574,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 0
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "bang",
 	eng: "a time",
@@ -583,7 +583,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "ha'bang",
 	eng: "one time",
@@ -592,7 +592,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "taqueaiq",
 	eng: "again",
@@ -601,7 +601,7 @@ export let dict = [
 	partOfSpeech: "",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "myeai, mayeai, mayay",
 	eng: "to speak, to talk",
@@ -610,7 +610,7 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "geang",
 	eng: "they",
@@ -619,7 +619,7 @@ export let dict = [
 	partOfSpeech: "noun",
 	chapter: 2
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	---
 	cham: "ew",
 	eng: "to be called",
@@ -628,5 +628,5 @@ export let dict = [
 	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
-		this.eng + this.eng.replace(/['",]+/g, '') + this.cham + this.cham.replace(/['",]+/g, '')
+		this.eng + this.cham
 	]

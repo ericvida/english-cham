@@ -10,7 +10,7 @@ tag app-root
 		<self>
 			<header .{"text-center bg-blue-900 text-gray-100 text-white pt-4 pb-16 tracking-wide"}>
 				<div .{@containerWidth}>
-					"English - Cham Dictionary "
+					<a href="https://github.com/iamtirado/english-cham" target="_blank"> "English - Cham Dictionary"
 					<p .{"text-teal-400 uppercase text-xs font-bold tracking-widest"}> 
 						"{dict.length} words"
 			<main .{"result flex flex-col bg-gray-200 min-h-screen px-12 pb-12 shadow-md"}>
@@ -36,7 +36,7 @@ tag search-aov-results
 			<ul>
 				for object in @arr
 					# object.keywords().toLowerCase().includes(@state.toLowerCase())
-					if fuzzysearch(@state, object.keywords())
+					if fuzzysearch(@state, object.eng) or fuzzysearch(@state, object.cham)
 						<li.{@resultClasses}> 
 							<div> object.eng
 							<div> object.cham
