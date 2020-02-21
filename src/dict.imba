@@ -604,10 +604,10 @@ export let dict = [
 		this.eng + this.cham
 	---
 	cham: "myeai, mayeai, mayay",
-	eng: "",
-	khmer: "",
+	eng: "to speak, to talk",
+	khmer: "niyeay",
 	def: '',
-	partOfSpeech: "",
+	partOfSpeech: "verb",
 	chapter: 1
 	keywords: do
 		this.eng + this.cham
