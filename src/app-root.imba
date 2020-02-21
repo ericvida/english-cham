@@ -25,7 +25,7 @@ tag search-aov
 	@state = ''
 	def render
 		<self>
-			<input[@state].{@inputClasses}:kplaceholder="type something">
+			<input[@state].{@inputClasses} placeholder="type something">
 
 tag search-aov-results
 	# Search aov results
