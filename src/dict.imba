@@ -1,426 +1,632 @@
 export let dict = [
-	cham: ["k'goo"],
-	eng: ["well"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["adverb"],
+	cham: "k'goo",
+	eng: "well",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adverb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["s'bai"],
-	eng: ["happy"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["adverb"],
+	cham: "s'bai",
+	eng: "happy",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adverb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["gae"],
-	eng: ["question particle"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["final particle"],
+	cham: "gae",
+	eng: "question particle",
+	khmer: "",
+	def: "",
+	partOfSpeech: "final particle",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["hhooq"],
-	eng: ["yes"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["exclamation"],
+	cham: "hhooq",
+	eng: "yes",
+	khmer: "",
+	def: "",
+	partOfSpeech: "exclamation",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["oo"],
-	eng: ["not", "no"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["exclamation", "adverb"],
+	cham: "oo",
+	eng: "not, no",
+	khmer: "",
+	def: "",
+	partOfSpeech: "exclamation, adverb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["lin"],
-	eng: ["I", "me"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["noun"],
+	cham: "lin",
+	eng: "I, me",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["min"],
-	eng: ["emphatic particle"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["final particle"],
+	cham: "min",
+	eng: "emphatic particle",
+	khmer: "",
+	def: "",
+	partOfSpeech: "final particle",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["uan  t'puan"],
-	eng: ["Thank you"],
-	def: [""],
-	partOfSpeech: ["adjective"],
+	cham: "uan  t'puan",
+	eng: "Thank you",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["much", "a lot"],
-	def: [""],
-	cham: ["loo"],
-	partOfSpeech: ["adjective"],
+	cham: "loo",
+	eng: "much, a lot",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["very much"],
-	def: [""],
-	cham: ["loo loo"],
-	partOfSpeech: ["adjective"],
+	cham: "loo loo",
+	eng: "very much",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["hello"],
-	def: ["God's Peace be upon you — This is the actual meaning of this phrase in Arabic."],
-	cham: ["Salamualaikum"],
-	partOfSpeech: ["phrase", "greeting"],
+	cham: "Salamualaikum",
+	eng: "hello",
+	khmer: "",
+	def: "God's Peace be upon you — This is the actual meaning of this phrase in Arabic.",
+	partOfSpeech: "phrase, greeting",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["hello"],
-	def: ["Peace be also upon you — This is the actual meaning of this phrase in Arabic."],
-	cham: ["Alaikumsalam"],
-	partOfSpeech: ["response phrase"],
+	cham: "Alaikumsalam",
+	eng: "hello",
+	khmer: "",
+	def: "Peace be also upon you — This is the actual meaning of this phrase in Arabic.",
+	partOfSpeech: "response phrase",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["what about ..."],
-	def: [""],
-	cham: ["cɑh"],
-	partOfSpeech: ["phrase"],
+	cham: "cɑh",
+	eng: "what about ...",
+	khmer: "",
+	def: "",
+	partOfSpeech: "phrase",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["sorry", "excuse me"],
-	def: [""],
-	cham: ["lakau ma.af"],
-	partOfSpeech: ["phrase"],
+	cham: "lakau ma.af",
+	eng: "sorry, excuse me",
+	khmer: "",
+	def: "",
+	partOfSpeech: "phrase",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["heart", "spirit"],
-	def: [""],
-	cham: ["tai"],
-	partOfSpeech: ["noun"],
+	cham: "tai",
+	eng: "heart, spirit",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["brother", "sister"],
-	def: [""],
-	cham: ["s'aai"],
-	partOfSpeech: ["noun"],
+	cham: "s'aai",
+	eng: "brother, sister",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["strong"],
-	def: [""],
-	cham: ["cap"]	,
-	partOfSpeech: ["adjective"],
+	cham: "cap",
+	eng: "strong",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["is not"],
-	def: [""],
-	cham: ["kin oo"],
-	partOfSpeech: [""],
+	cham: "kin oo",
+	eng: "is not",
+	khmer: "",
+	def: "",
+	partOfSpeech: "",
 	chapter: 2
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["instead of", "in return"],
-	cham: ["woeq","wœq"],
-	def: ['Like the khmer word "ving"'],
-	partOfSpeech: [""],
+	cham: "woeq, wœq",
+	eng: "instead of, in return",
+	khmer: "",
+	def: 'Like the khmer word "ving"',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["please", "polite particle"],
-	cham: ["lakaw"],
-	def: [''],
-	partOfSpeech: [""],
+	cham: "lakaw",
+	eng: "please, polite particle",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qeq","ha qeq"],
-	eng: ["what "],
-	def: ['used at end of word to say what?'],
-	partOfSpeech: ["noun"],
+	cham: "qeq, ha'qeq, ha",
+	eng: "what ",
+	khmer: "",
+	def: 'used at end of word to say what?',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qeq qeq"],
-	eng: ["some things", "something"],
-	khmer: [""],
-	def: ['I have something for you.'],
-	partOfSpeech: ["phrase noun"],
+	cham: "qeq qeq",
+	eng: "some things, something",
+	khmer: "",
+	def: 'I have something for you.',
+	partOfSpeech: "phrase noun",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["progressive particle"],
-	cham: ["dtɔɔq"],
-	def: ['Makes a word progressive'],
-	partOfSpeech: [""],
+	cham: "dtɔɔq",
+	eng: "progressive particle",
+	khmer: "",
+	def: 'Makes a word progressive',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["to go"],
-	cham: ["næw","naew"],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "næw, naew",
+	eng: "to go",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["laai"],
-	cham: ["where"],
-	khmer: ["naa"],
-	def: [''],
-	partOfSpeech: [""],
+	cham: "where",
+	eng: "laai",
+	khmer: "naa",
+	def: '',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	eng: ["school"],
-	cham: ["s'laa"],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "s'laa",
+	eng: "school",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["dtɔɔq"],
-	eng: ["to stay", "to have left over"],
-	khmer: ["now"],
-	def: ['to stay or to be.'],
-	partOfSpeech: ["verb"],
+	cham: "dtɔɔq",
+	eng: "to stay, to have left over",
+	khmer: "now",
+	def: 'to stay or to be.',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["haa pih", "pih"],
-	eng: ["to run out"],
-	khmer: ["ah"],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "haa pih, pih",
+	eng: "to run out",
+	khmer: "ah",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["maq"],
-	eng: ["at", "place"],
-	khmer: ["ay"],
-	def: [''],
-	partOfSpeech: [""],
+	cham: "maq",
+	eng: "at, place",
+	khmer: "ay",
+	def: '',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["haang"],
-	eng: ["shop"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "haang",
+	eng: "shop",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["l'saai"],
-	eng: ["cooked rice"],
-	khmer: ["bai"],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "l'saai",
+	eng: "cooked rice",
+	khmer: "bai",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["haang l'saai"],
-	eng: ["restaurant"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "haang l'saai",
+	eng: "restaurant",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["tumnak"],
-	eng: ["to stay for a night or more"],
-	khmer: [""],
-	def: ['To stay somewhere other than your house for more than one night'],
-	partOfSpeech: ["verb"],
+	cham: "tumnak",
+	eng: "to stay for a night or more",
+	khmer: "",
+	def: 'To stay somewhere other than your house for more than one night',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["haang tumnak"],
-	eng: ["guest house"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "haang tumnak",
+	eng: "guest house",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["pah"],
-	eng: ["to rent from"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "pah",
+	eng: "to rent from",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["k'pah"],
-	eng: ["to rent to"],
-	khmer: ["cuəl"],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "k'pah",
+	eng: "to rent to",
+	khmer: "cuəl",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["saang k'pah"],
-	eng: ["house for rent, hotel"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "saang k'pah",
+	eng: "house for rent, hotel",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["jman"],
-	eng: ["toilet", "bathroom"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "jman",
+	eng: "toilet, bathroom",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah"],
-	eng: ["side"],
-	khmer: ["khang"],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "qah",
+	eng: "side",
+	khmer: "khang",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["iw"],
-	eng: ["left"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "iw",
+	eng: "left",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["nuaq"],
-	eng: ["right"],
-	khmer: ["s'dam"],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "nuaq",
+	eng: "right",
+	khmer: "s'dam",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah nuaq"],
-	eng: ["right side"],
-	khmer: ["khang s'dam"],
-	def: [''],
-	partOfSpeech: ["phrase"],
+	cham: "qah nuaq",
+	eng: "right side",
+	khmer: "khang s'dam",
+	def: '',
+	partOfSpeech: "phrase",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["naoq"],
-	eng: ["front"],
-	khmer: ["mok"],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "naoq",
+	eng: "front",
+	khmer: "mok",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah naoq"],
-	eng: ["in front of"],
-	khmer: ["khang mok"],
-	def: ['in the front of, in front of'],
-	partOfSpeech: ["phrase"],
+	cham: "qah naoq",
+	eng: "in front of",
+	khmer: "khang mok",
+	def: 'in the front of, in front of',
+	partOfSpeech: "phrase",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["tooq"],
-	eng: ["behind, the butt"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective, noun"],
+	cham: "tooq",
+	eng: "behind, the butt",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective, noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah tooq"],
-	eng: ["behind of"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["In the back of, behind of"],
+	cham: "qah tooq",
+	eng: "behind of",
+	khmer: "",
+	def: '',
+	partOfSpeech: "In the back of, behind of",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah nii"],
-	eng: ["here"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["phrasal noun"],
+	cham: "qah nii",
+	eng: "here",
+	khmer: "",
+	def: '',
+	partOfSpeech: "phrasal noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qah dteh"],
-	eng: ["there"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["phrasal noun"],
+	cham: "nii, nəy",
+	eng: "this, here",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["bpeaq"],
-	eng: ["to be right", "to be true"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "qah dteh",
+	eng: "there",
+	khmer: "",
+	def: '',
+	partOfSpeech: "phrasal noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["how"],
-	eng: ["to have"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "bpeaq",
+	eng: "to be right, to be true",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["how"],
-	eng: ["It's", "It is"],
-	khmer: [""],
-	def: ["It's correct"],
-	partOfSpeech: ["verb"],
+	cham: "how",
+	eng: "to have",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["how"],
-	eng: ["to be able to"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "how",
+	eng: "It's, It is",
+	khmer: "",
+	def: "It's correct",
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "how",
+	eng: "to be able to",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	
 	---
-	cham: ["djaoq"],
-	eng: ["correct"],
-	khmer: ["troʋ"],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "djaoq",
+	eng: "correct",
+	khmer: "troʋ",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["p'guq"],
-	eng: ["work"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "p'guq",
+	eng: "work",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["djaoq p'guq"],
-	eng: ["need","need to use"],
-	khmer: ["troʋ kaa"],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter : 1
+	cham: "djaoq p'guq",
+	eng: "need, need to use",
+	khmer: "troʋ kaa",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["hong"],
-	eng: ["and","with"],
-	khmer: ["ning","ciamuey"],
-	def: [''],
-	partOfSpeech: [""],
+	cham: "hong",
+	eng: "and, with",
+	khmer: "ning, ciamuey",
+	def: '',
+	partOfSpeech: "",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qaoq"],
-	eng: ["together"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
+	cham: "qaoq",
+	eng: "together",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["qaoq"],
-	eng: ["companion"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "qaoq",
+	eng: "companion",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["jung","jʉng"],
-	eng: ["to succeed", "to be able to"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
+	cham: "jung, jʉng",
+	eng: "to succeed, to be able to",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["bəng","bung"],
-	eng: ["to eat"],
-	khmer: [""],
-	def: ['Eating anything but rice'],
-	partOfSpeech: ["verb"],
+	cham: "bəng, bung",
+	eng: "to eat",
+	khmer: "",
+	def: 'Eating anything but rice',
+	partOfSpeech: "verb",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["hoaq"],
-	eng: ["to eat"],
-	khmer: [""],
-	def: ['To eat rice only'],
-	partOfSpeech: [""],
+	cham: "hoaq",
+	eng: "to eat",
+	khmer: "",
+	def: 'To eat rice only',
+	partOfSpeech: "",
 	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["tai ai"],
-	eng: ["You (plural)"],
-	khmer: ["bong p'oun"],
-	def: ['for people younger than you, or siblings.'],
-	partOfSpeech: ["noun"],
+	cham: "tai ai",
+	eng: "You (plural)",
+	khmer: "bong p'oun",
+	def: 'for people younger than you, or siblings.',
+	partOfSpeech: "noun",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
 	---
-	cham: ["aai aai"],
-	eng: ["You (plural)"],
-	khmer: ["bong bong"],
-	def: [''],
-	partOfSpeech: ["noun"],
+	cham: "aai aai",
+	eng: "You (plural)",
+	khmer: "bong bong",
+	def: '',
+	partOfSpeech: "noun",
 	chapter: 0
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "bang",
+	eng: "a time",
+	khmer: "dong",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "ha'bang",
+	eng: "one time",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "taqueaiq",
+	eng: "again",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "myeai, mayeai, mayay",
+	eng: "",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "geang",
+	eng: "they",
+	khmer: "kei",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 2
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "ew",
+	eng: "to be called",
+	khmer: "hɑʉ",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1
+	keywords: do
+		this.eng + this.cham
 	]

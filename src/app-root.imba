@@ -1,4 +1,5 @@
 import {dict} from './dict.imba'
+let search = ""
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
 	@query = ''
@@ -12,92 +13,39 @@ tag app-root
 			<main .{"result flex flex-col bg-gray-200 min-h-screen px-12 pb-12 shadow-md"}>
 				<div 
 					.{@containerWidth + "shadow-2xl py-8 px-8 rounded-lg bg-teal-500 -mt-12 mb-8 shadow-lg"}>
-					<input[@query] placeholder="search" 
-						.{"flex-1 rounded-md py-2 px-4 w-full shadow-inner"}>
+					<search-aov bind:state=search inputClasses="flex-1 rounded-md py-2 px-4 w-full shadow-inner">
 				<div .{@containerWidth}.flex>
-					<search-results .w-full search=@query>
-tag search-results
-	@match = true
+					<search-aov-results.w-full resultClasses="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between" 
+						arr=dict bind:state=search>
+tag search-aov
+	# Search aov (array > object > value)
+	# in app-root
+	@state = ''
 	def render
 		<self>
-			<div>
-				for word in dict
-					if word.eng[0].toLowerCase().includes(#context.query.toLowerCase())
-						@match = true
-					elif word.eng[1] and word.eng[1].toLowerCase().includes(#context.query)
-						@match = true
-					elif word.cham[0].toLowerCase().includes(#context.query)
-						@match = true
-					else
-						@match = false
+			<input[@state].{@inputClasses} placeholder="type something">
 
-					if @match is false
-						<result-word.hidden english=word.eng cham=word.cham>
-					else
-						<result-word.visible english=word.eng cham=word.cham>
-tag result-word
+tag search-aov-results
+	# Search aov results
+	# in app-root
 	def render
-		<self .{"py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between"}> 
-			<div>
-				for e, k in @english
-					if k is 0 
-						<span> "{e}"
-					else
-						<span> ", {e}"
-			<div>
-				for c, k in @cham
-					if k is 0
-						<b> "{c}"
-					else
-						<b> ", {c}"
+		<self>
+			<ul>
+				for object in @arr
+					if object.keywords().toLowerCase().includes(@state.toLowerCase())
+						<li.{@resultClasses}> 
+							<div> object.eng
+							<div> object.cham
 
 ### css scoped
 
-# app-root {
-# }
-# app-root ul {
-# 	list-style-type: none;
-# 	margin: 0;
-# 	padding: 0 20px;
-# }
-# .dictCount {
-# 	width: 100%;
-# 	text-align: center;
-# 	padding: 5px;
-# }
-# .wordtotal {
-# 	text-align: center;
-# 	padding: 10px;
-# }
-# .vbox {
-# 	background-color: white;
-# }
-# .results > li {
-# 	padding: 10px;
-# 	padding-left: 10px;
-# 	border-bottom: 1px solid whitesmoke;
+app-root {
+}
+app-root ul {
+	list-style-type: none;
+	padding: 0 20px;
+}
 
-# }
-# .result ol {
-# 	list-style-type: upper-roman
-# }
-# .result-word {
-# }
-# .partOfSpeech {
-# 	color: #ccc;
-# 	font-weight: light
-# 	margin-bottom: 10px;
-# 	font-size: .9rem;	
-# }
-# .result ol li{
-# 	margin-bottom: 10px;
-# }
-.word > * {
-	display:none;
-}
-.show {
-	display: inline-block;
-}
 ###
 
 ### css

@@ -1704,371 +1704,711 @@ extend$$4(HTMLInputElement,{
 });
 
 let dict = [
-	{cham: ["k'goo"],
-	eng: ["well"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["adverb"],
-	chapter: 1},
-	{cham: ["s'bai"],
-	eng: ["happy"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["adverb"],
-	chapter: 1},
-	{cham: ["gae"],
-	eng: ["question particle"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["final particle"],
-	chapter: 1},
-	{cham: ["hhooq"],
-	eng: ["yes"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["exclamation"],
-	chapter: 1},
-	{cham: ["oo"],
-	eng: ["not","no"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["exclamation","adverb"],
-	chapter: 1},
-	{cham: ["lin"],
-	eng: ["I","me"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["min"],
-	eng: ["emphatic particle"],
-	khmer: [""],
-	def: [""],
-	partOfSpeech: ["final particle"],
-	chapter: 1},
-	{cham: ["uan  t'puan"],
-	eng: ["Thank you"],
-	def: [""],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{eng: ["much","a lot"],
-	def: [""],
-	cham: ["loo"],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{eng: ["very much"],
-	def: [""],
-	cham: ["loo loo"],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{eng: ["hello"],
-	def: ["God's Peace be upon you — This is the actual meaning of this phrase in Arabic."],
-	cham: ["Salamualaikum"],
-	partOfSpeech: ["phrase","greeting"],
-	chapter: 1},
-	{eng: ["hello"],
-	def: ["Peace be also upon you — This is the actual meaning of this phrase in Arabic."],
-	cham: ["Alaikumsalam"],
-	partOfSpeech: ["response phrase"],
-	chapter: 1},
-	{eng: ["what about ..."],
-	def: [""],
-	cham: ["cɑh"],
-	partOfSpeech: ["phrase"],
-	chapter: 1},
-	{eng: ["sorry","excuse me"],
-	def: [""],
-	cham: ["lakau ma.af"],
-	partOfSpeech: ["phrase"],
-	chapter: 1},
-	{eng: ["heart","spirit"],
-	def: [""],
-	cham: ["tai"],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{eng: ["brother","sister"],
-	def: [""],
-	cham: ["s'aai"],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{eng: ["strong"],
-	def: [""],
-	cham: ["cap"],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{eng: ["is not"],
-	def: [""],
-	cham: ["kin oo"],
-	partOfSpeech: [""],
-	chapter: 2},
-	{eng: ["instead of","in return"],
-	cham: ["woeq","wœq"],
-	def: ['Like the khmer word "ving"'],
-	partOfSpeech: [""],
-	chapter: 1},
-	{eng: ["please","polite particle"],
-	cham: ["lakaw"],
-	def: [''],
-	partOfSpeech: [""],
-	chapter: 1},
-	{cham: ["qeq","ha qeq"],
-	eng: ["what "],
-	def: ['used at end of word to say what?'],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["qeq qeq"],
-	eng: ["some things","something"],
-	khmer: [""],
-	def: ['I have something for you.'],
-	partOfSpeech: ["phrase noun"],
-	chapter: 0},
-	{eng: ["progressive particle"],
-	cham: ["dtɔɔq"],
-	def: ['Makes a word progressive'],
-	partOfSpeech: [""],
-	chapter: 1},
-	{eng: ["to go"],
-	cham: ["næw","naew"],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{eng: ["laai"],
-	cham: ["where"],
-	khmer: ["naa"],
-	def: [''],
-	partOfSpeech: [""],
-	chapter: 1},
-	{eng: ["school"],
-	cham: ["s'laa"],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["dtɔɔq"],
-	eng: ["to stay","to have left over"],
-	khmer: ["now"],
-	def: ['to stay or to be.'],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["haa pih","pih"],
-	eng: ["to run out"],
-	khmer: ["ah"],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 0},
-	{cham: ["maq"],
-	eng: ["at","place"],
-	khmer: ["ay"],
-	def: [''],
-	partOfSpeech: [""],
-	chapter: 1},
-	{cham: ["haang"],
-	eng: ["shop"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["l'saai"],
-	eng: ["cooked rice"],
-	khmer: ["bai"],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["haang l'saai"],
-	eng: ["restaurant"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["tumnak"],
-	eng: ["to stay for a night or more"],
-	khmer: [""],
-	def: ['To stay somewhere other than your house for more than one night'],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["haang tumnak"],
-	eng: ["guest house"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["pah"],
-	eng: ["to rent from"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["k'pah"],
-	eng: ["to rent to"],
-	khmer: ["cuəl"],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["saang k'pah"],
-	eng: ["house for rent, hotel"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["jman"],
-	eng: ["toilet","bathroom"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["qah"],
-	eng: ["side"],
-	khmer: ["khang"],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["iw"],
-	eng: ["left"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["nuaq"],
-	eng: ["right"],
-	khmer: ["s'dam"],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["qah nuaq"],
-	eng: ["right side"],
-	khmer: ["khang s'dam"],
-	def: [''],
-	partOfSpeech: ["phrase"],
-	chapter: 1},
-	{cham: ["naoq"],
-	eng: ["front"],
-	khmer: ["mok"],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["qah naoq"],
-	eng: ["in front of"],
-	khmer: ["khang mok"],
-	def: ['in the front of, in front of'],
-	partOfSpeech: ["phrase"],
-	chapter: 1},
-	{cham: ["tooq"],
-	eng: ["behind, the butt"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective, noun"],
-	chapter: 1},
-	{cham: ["qah tooq"],
-	eng: ["behind of"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["In the back of, behind of"],
-	chapter: 1},
-	{cham: ["qah nii"],
-	eng: ["here"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["phrasal noun"],
-	chapter: 1},
-	{cham: ["qah dteh"],
-	eng: ["there"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["phrasal noun"],
-	chapter: 1},
-	{cham: ["bpeaq"],
-	eng: ["to be right","to be true"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["how"],
-	eng: ["to have"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["how"],
-	eng: ["It's","It is"],
-	khmer: [""],
-	def: ["It's correct"],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["how"],
-	eng: ["to be able to"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["djaoq"],
-	eng: ["correct"],
-	khmer: ["troʋ"],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["p'guq"],
-	eng: ["work"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["djaoq p'guq"],
-	eng: ["need","need to use"],
-	khmer: ["troʋ kaa"],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["hong"],
-	eng: ["and","with"],
-	khmer: ["ning","ciamuey"],
-	def: [''],
-	partOfSpeech: [""],
-	chapter: 0},
-	{cham: ["qaoq"],
-	eng: ["together"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["adjective"],
-	chapter: 1},
-	{cham: ["qaoq"],
-	eng: ["companion"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 1},
-	{cham: ["jung","jʉng"],
-	eng: ["to succeed","to be able to"],
-	khmer: [""],
-	def: [''],
-	partOfSpeech: ["verb"],
-	chapter: 0},
-	{cham: ["bəng","bung"],
-	eng: ["to eat"],
-	khmer: [""],
-	def: ['Eating anything but rice'],
-	partOfSpeech: ["verb"],
-	chapter: 1},
-	{cham: ["hoaq"],
-	eng: ["to eat"],
-	khmer: [""],
-	def: ['To eat rice only'],
-	partOfSpeech: [""],
-	chapter: 1},
-	{cham: ["tai ai"],
-	eng: ["You (plural)"],
-	khmer: ["bong p'oun"],
-	def: ['for people younger than you, or siblings.'],
-	partOfSpeech: ["noun"],
-	chapter: 0},
-	{cham: ["aai aai"],
-	eng: ["You (plural)"],
-	khmer: ["bong bong"],
-	def: [''],
-	partOfSpeech: ["noun"],
-	chapter: 0}
+	{cham: "k'goo",
+	eng: "well",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adverb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "s'bai",
+	eng: "happy",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adverb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "gae",
+	eng: "question particle",
+	khmer: "",
+	def: "",
+	partOfSpeech: "final particle",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "hhooq",
+	eng: "yes",
+	khmer: "",
+	def: "",
+	partOfSpeech: "exclamation",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "oo",
+	eng: "not, no",
+	khmer: "",
+	def: "",
+	partOfSpeech: "exclamation, adverb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "lin",
+	eng: "I, me",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "min",
+	eng: "emphatic particle",
+	khmer: "",
+	def: "",
+	partOfSpeech: "final particle",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "uan  t'puan",
+	eng: "Thank you",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "loo",
+	eng: "much, a lot",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "loo loo",
+	eng: "very much",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "Salamualaikum",
+	eng: "hello",
+	khmer: "",
+	def: "God's Peace be upon you — This is the actual meaning of this phrase in Arabic.",
+	partOfSpeech: "phrase, greeting",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "Alaikumsalam",
+	eng: "hello",
+	khmer: "",
+	def: "Peace be also upon you — This is the actual meaning of this phrase in Arabic.",
+	partOfSpeech: "response phrase",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "cɑh",
+	eng: "what about ...",
+	khmer: "",
+	def: "",
+	partOfSpeech: "phrase",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "lakau ma.af",
+	eng: "sorry, excuse me",
+	khmer: "",
+	def: "",
+	partOfSpeech: "phrase",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "tai",
+	eng: "heart, spirit",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "s'aai",
+	eng: "brother, sister",
+	khmer: "",
+	def: "",
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "cap",
+	eng: "strong",
+	khmer: "",
+	def: "",
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "kin oo",
+	eng: "is not",
+	khmer: "",
+	def: "",
+	partOfSpeech: "",
+	chapter: 2,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "woeq, wœq",
+	eng: "instead of, in return",
+	khmer: "",
+	def: 'Like the khmer word "ving"',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "lakaw",
+	eng: "please, polite particle",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qeq, ha'qeq, ha",
+	eng: "what ",
+	khmer: "",
+	def: 'used at end of word to say what?',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qeq qeq",
+	eng: "some things, something",
+	khmer: "",
+	def: 'I have something for you.',
+	partOfSpeech: "phrase noun",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "dtɔɔq",
+	eng: "progressive particle",
+	khmer: "",
+	def: 'Makes a word progressive',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "næw, naew",
+	eng: "to go",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "where",
+	eng: "laai",
+	khmer: "naa",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "s'laa",
+	eng: "school",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "dtɔɔq",
+	eng: "to stay, to have left over",
+	khmer: "now",
+	def: 'to stay or to be.',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "haa pih, pih",
+	eng: "to run out",
+	khmer: "ah",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "maq",
+	eng: "at, place",
+	khmer: "ay",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "haang",
+	eng: "shop",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "l'saai",
+	eng: "cooked rice",
+	khmer: "bai",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "haang l'saai",
+	eng: "restaurant",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "tumnak",
+	eng: "to stay for a night or more",
+	khmer: "",
+	def: 'To stay somewhere other than your house for more than one night',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "haang tumnak",
+	eng: "guest house",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "pah",
+	eng: "to rent from",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "k'pah",
+	eng: "to rent to",
+	khmer: "cuəl",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "saang k'pah",
+	eng: "house for rent, hotel",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "jman",
+	eng: "toilet, bathroom",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah",
+	eng: "side",
+	khmer: "khang",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "iw",
+	eng: "left",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "nuaq",
+	eng: "right",
+	khmer: "s'dam",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah nuaq",
+	eng: "right side",
+	khmer: "khang s'dam",
+	def: '',
+	partOfSpeech: "phrase",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "naoq",
+	eng: "front",
+	khmer: "mok",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah naoq",
+	eng: "in front of",
+	khmer: "khang mok",
+	def: 'in the front of, in front of',
+	partOfSpeech: "phrase",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "tooq",
+	eng: "behind, the butt",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective, noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah tooq",
+	eng: "behind of",
+	khmer: "",
+	def: '',
+	partOfSpeech: "In the back of, behind of",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah nii",
+	eng: "here",
+	khmer: "",
+	def: '',
+	partOfSpeech: "phrasal noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "nii, nəy",
+	eng: "this, here",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qah dteh",
+	eng: "there",
+	khmer: "",
+	def: '',
+	partOfSpeech: "phrasal noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "bpeaq",
+	eng: "to be right, to be true",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "how",
+	eng: "to have",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "how",
+	eng: "It's, It is",
+	khmer: "",
+	def: "It's correct",
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "how",
+	eng: "to be able to",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "djaoq",
+	eng: "correct",
+	khmer: "troʋ",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "p'guq",
+	eng: "work",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "djaoq p'guq",
+	eng: "need, need to use",
+	khmer: "troʋ kaa",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "hong",
+	eng: "and, with",
+	khmer: "ning, ciamuey",
+	def: '',
+	partOfSpeech: "",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qaoq",
+	eng: "together",
+	khmer: "",
+	def: '',
+	partOfSpeech: "adjective",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "qaoq",
+	eng: "companion",
+	khmer: "",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "jung, jʉng",
+	eng: "to succeed, to be able to",
+	khmer: "",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "bəng, bung",
+	eng: "to eat",
+	khmer: "",
+	def: 'Eating anything but rice',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "hoaq",
+	eng: "to eat",
+	khmer: "",
+	def: 'To eat rice only',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "tai ai",
+	eng: "You (plural)",
+	khmer: "bong p'oun",
+	def: 'for people younger than you, or siblings.',
+	partOfSpeech: "noun",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "aai aai",
+	eng: "You (plural)",
+	khmer: "bong bong",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 0,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "bang",
+	eng: "a time",
+	khmer: "dong",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "ha'bang",
+	eng: "one time",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "taqueaiq",
+	eng: "again",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "myeai, mayeai, mayay",
+	eng: "",
+	khmer: "",
+	def: '',
+	partOfSpeech: "",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "geang",
+	eng: "they",
+	khmer: "kei",
+	def: '',
+	partOfSpeech: "noun",
+	chapter: 2,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "ew",
+	eng: "to be called",
+	khmer: "hɑʉ",
+	def: '',
+	partOfSpeech: "verb",
+	chapter: 1,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}}
 ];
 
-imba.inlineStyles("app-root ul[data-ie0370096]{# list-style-type:none;# margin:0;# padding:0 20px;}.dictCount[data-ie0370096]{# width:100%;# text-align:center;# padding:5px;}.wordtotal[data-ie0370096]{# text-align:center;# padding:10px;}.vbox[data-ie0370096]{# background-color:white;}.results > li[data-ie0370096]{# padding:10px;# padding-left:10px;# border-bottom:1px solid whitesmoke;}.result ol[data-ie0370096]{# list-style-type:upper-roman;}.partOfSpeech[data-ie0370096]{# color:#ccc;# font-weight:light;# margin-bottom:10px;# font-size:.9rem;}.result ol li[data-ie0370096]{# margin-bottom:10px;}.word > *[data-ie0370096]{display:none;}.show[data-ie0370096]{display:inline-block;}\n# html,body{# width:100%;# height:100%;# margin:0px;# font-family:Arial;}# body{# display:block;# font-size:14px;# align-items:stretch;# justify-content:center;# flex-direction:column;# background:whitesmoke;# padding:30px;# min-height:80vh;}# body,div,form,header,footer,section,input,button,nav,aside,article{# box-sizing:border-box;}# div,section,input,ul,main,article,.grow{# flex:1 1 auto;}# input{# display:block;# padding:0px 12px;# background:transparent;# border:none;# font-size:inherit;# width:50px;# height:24px;}# header,footer{# flex:0 0 auto;# display:flex;# flex-direction:row;# justify-content:flex-start;# align-items:center;# padding:10px 6px;# background:#e8e8e8;}\n");
+imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n# html,body{# width:100%;# height:100%;# margin:0px;# font-family:Arial;}# body{# display:block;# font-size:14px;# align-items:stretch;# justify-content:center;# flex-direction:column;# background:whitesmoke;# padding:30px;# min-height:80vh;}# body,div,form,header,footer,section,input,button,nav,aside,article{# box-sizing:border-box;}# div,section,input,ul,main,article,.grow{# flex:1 1 auto;}# input{# display:block;# padding:0px 12px;# background:transparent;# border:none;# font-size:inherit;# width:50px;# height:24px;}# header,footer{# flex:0 0 auto;# display:flex;# flex-direction:row;# justify-content:flex-start;# align-items:center;# padding:10px 6px;# background:#e8e8e8;}\n");
 function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1 = new WeakMap(), $2 = new WeakMap(), $3 = new WeakMap();
+let search = "";
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
 		
@@ -2114,18 +2454,19 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 		t$2 = (b$2=d$2=1,c$0.o) || (b$2=d$2=0,c$0.o=t$2=imba.createElement('div',512,t$1,null,null,'ie0370096'));
 		(v$2=this.containerWidth + "shadow-2xl py-8 px-8 rounded-lg bg-teal-500 -mt-12 mb-8 shadow-lg",v$2===c$0.q||(d$2|=2,c$0.q=v$2));
 		(d$2&2 && t$2.flag$((c$0.q||'')));
-		t$3 = (b$3=d$3=1,c$0.r) || (b$3=d$3=0,c$0.r=t$3=imba.createElement('input',512,t$2,null,null,'ie0370096'));
-		v$3=c$0.s || (c$0.s=t$3.bind$('model',[this,'query']));
-		b$3 || (t$3.placeholder="search");
-		(v$3="flex-1 rounded-md py-2 px-4 w-full shadow-inner",v$3===c$0.u||(d$3|=2,c$0.u=v$3));
-		(d$3&2 && t$3.flag$((c$0.u||'')));
+		t$3 = (b$3=d$3=1,c$0.r) || (b$3=d$3=0,c$0.r=t$3=imba.createComponent('search-aov',0,t$2,null,null,'ie0370096'));
+		b$3 || t$3.bind$('state',{get:function(){ return search },set:function(v$){ search = v$; }});
+		b$3 || (t$3.inputClasses="flex-1 rounded-md py-2 px-4 w-full shadow-inner");
 		b$3 || !t$3.setup || t$3.setup(d$3);
 		t$3.end$(d$3);
-		t$2 = (b$2=d$2=1,c$0.v) || (b$2=d$2=0,c$0.v=t$2=imba.createElement('div',512,t$1,'flex',null,'ie0370096'));
-		(v$2=this.containerWidth,v$2===c$0.x||(d$2|=2,c$0.x=v$2));
-		(d$2&2 && t$2.flag$('flex'+' '+(c$0.x||'')));
-		t$3 = (b$3=d$3=1,c$0.y) || (b$3=d$3=0,c$0.y=t$3=imba.createComponent('search-results',0,t$2,'w-full',null,'ie0370096'));
-		(v$3=this.query,v$3===c$0.z || (t$3.search=c$0.z=v$3));
+		b$3 || t$3.insertInto$(t$2);
+		t$2 = (b$2=d$2=1,c$0.t) || (b$2=d$2=0,c$0.t=t$2=imba.createElement('div',512,t$1,'flex',null,'ie0370096'));
+		(v$2=this.containerWidth,v$2===c$0.v||(d$2|=2,c$0.v=v$2));
+		(d$2&2 && t$2.flag$('flex'+' '+(c$0.v||'')));
+		t$3 = (b$3=d$3=1,c$0.w) || (b$3=d$3=0,c$0.w=t$3=imba.createComponent('search-aov-results',0,t$2,'w-full',null,'ie0370096'));
+		b$3 || (t$3.resultClasses="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between");
+		(v$3=dict,v$3===c$0.x || (t$3.arr=c$0.x=v$3));
+		b$3 || t$3.bind$('state',{get:function(){ return search },set:function(v$){ search = v$; }});
 		b$3 || !t$3.setup || t$3.setup(d$3);
 		t$3.end$(d$3);
 		b$3 || t$3.insertInto$(t$2);
@@ -2133,7 +2474,7 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 		return t$0;
 	}
 } AppRootComponent.init$(); imba.tags.define('app-root',AppRootComponent,{});
-class SearchResultsComponent extends imba.tags.get('component','ImbaElement') {
+class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
 		
 		return this;
@@ -2143,178 +2484,80 @@ class SearchResultsComponent extends imba.tags.get('component','ImbaElement') {
 		return this.setAttribute('data-ie0370096','');
 	}
 	
-	set match(value) {
+	// Search aov (array > object > value)
+	// in app-root
+	set state(value) {
 		return $3.set(this,value);
 	}
-	get match() {
-		return $3.has(this) ? $3.get(this) : true;
+	get state() {
+		return $3.has(this) ? $3.get(this) : '';
 	}
 	render(){
-		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3;
+		var t$0, c$0, b$0, d$0, t$1, b$1, d$1, v$1;
 		
 		t$0=this;
 		t$0.open$();
 		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
-		t$1 = c$0.aa || (c$0.aa = t$1=imba.createElement('div',2048,t$0,null,null,'ie0370096'));
-		t$2 = c$0.ab || (c$0.ab = t$2 = imba.createKeyedFragment(1024,t$1));
-		k$2 = 0;
-		c$2=t$2.$;
-		for (let i = 0, items = iter$$5(dict), len = items.length, word; i < len; i++) {
-			word = items[i];
-			
-			if (word.eng[0].toLowerCase().includes(this.__context.query.toLowerCase())) {
-				
-				this.match = true;
-			} else if (word.eng[1] && word.eng[1].toLowerCase().includes(this.__context.query)) {
-				
-				this.match = true;
-			} else if (word.cham[0].toLowerCase().includes(this.__context.query)) {
-				
-				this.match = true;
-			} else {
-				
-				this.match = false;
-			}			
-			if (this.match === false) {
-				
-				k$3='ac$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createComponent('result-word',0,t$2,'hidden',null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$ac || (t$3.$ac={});
-				(v$3=word.eng,v$3===c$3.ad || (t$3.english=c$3.ad=v$3));
-				(v$3=word.cham,v$3===c$3.ae || (t$3.cham=c$3.ae=v$3));
-				b$3 || !t$3.setup || t$3.setup(d$3);
-				t$3.end$(d$3);
-				t$2.push(t$3,k$2++,k$3);
-			} else {
-				
-				k$3='af$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createComponent('result-word',0,t$2,'visible',null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$af || (t$3.$af={});
-				(v$3=word.eng,v$3===c$3.ag || (t$3.english=c$3.ag=v$3));
-				(v$3=word.cham,v$3===c$3.ah || (t$3.cham=c$3.ah=v$3));
-				b$3 || !t$3.setup || t$3.setup(d$3);
-				t$3.end$(d$3);
-				t$2.push(t$3,k$2++,k$3);
-			}		}t$2.end$(k$2);
+		t$1 = (b$1=d$1=1,c$0.z) || (b$1=d$1=0,c$0.z=t$1=imba.createElement('input',512,t$0,null,null,'ie0370096'));
+		v$1=c$0.aa || (c$0.aa=t$1.bind$('model',[this,'state']));
+		(v$1=this.inputClasses,v$1===c$0.ac||(d$1|=2,c$0.ac=v$1));
+		b$1 || (t$1.placeholder="type something");
+		(d$1&2 && t$1.flag$((c$0.ac||'')));
+		b$1 || !t$1.setup || t$1.setup(d$1);
+		t$1.end$(d$1);
 		t$0.close$(d$0);
 		return t$0;
 	}
-} SearchResultsComponent.init$(); imba.tags.define('search-results',SearchResultsComponent,{});
-class ResultWordComponent extends imba.tags.get('component','ImbaElement') {
+} SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
+
+class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
 	init$(){
 		super.init$();return this.setAttribute('data-ie0370096','');
 	}
 	
+	// Search aov results
+	// in app-root
 	render(){
-		var t$0, c$0, b$0, d$0, v$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3;
+		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, v$4;
 		
 		t$0=this;
 		t$0.open$();
 		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
-		(v$0="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between",v$0===c$0.aj||(d$0|=2,c$0.aj=v$0));
-		((!b$0||d$0&2) && t$0.flagSelf$((c$0.aj||'')));
-		t$1 = c$0.ak || (c$0.ak = t$1=imba.createElement('div',2048,t$0,null,null,'ie0370096'));
-		t$2 = c$0.al || (c$0.al = t$2 = imba.createKeyedFragment(1024,t$1));
+		t$1 = c$0.ad || (c$0.ad = t$1=imba.createElement('ul',2048,t$0,null,null,'ie0370096'));
+		t$2 = c$0.ae || (c$0.ae = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
-		for (let k = 0, items = iter$$5(this.english), len = items.length, e; k < len; k++) {
-			e = items[k];
+		for (let i = 0, items = iter$$5(this.arr), len = items.length, object; i < len; i++) {
+			object = items[i];
 			
-			if (k === 0) {
+			if (object.keywords().toLowerCase().includes(this.state.toLowerCase())) {
 				
-				k$3='am$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('span',4096,t$2,null,null,'ie0370096'));
+				k$3='af$' + k$2;
+				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,'ie0370096'));
 				b$3||(t$3.up$=t$2);
-				c$3=t$3.$am || (t$3.$am={});
-				(v$3=("" + e),v$3===c$3.an || (c$3.an_ = t$3.insert$(c$3.an=v$3,0,c$3.an_)));
-				t$2.push(t$3,k$2++,k$3);
-			} else {
-				
-				k$3='ao$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('span',4096,t$2,null,null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$ao || (t$3.$ao={});
-				(v$3=(", " + e),v$3===c$3.ap || (c$3.ap_ = t$3.insert$(c$3.ap=v$3,0,c$3.ap_)));
-				t$2.push(t$3,k$2++,k$3);
-			}		}t$2.end$(k$2);
-		t$1 = c$0.aq || (c$0.aq = t$1=imba.createElement('div',2048,t$0,null,null,'ie0370096'));
-		t$2 = c$0.ar || (c$0.ar = t$2 = imba.createKeyedFragment(1024,t$1));
-		k$2 = 0;
-		c$2=t$2.$;
-		for (let k = 0, items = iter$$5(this.cham), len = items.length, c; k < len; k++) {
-			c = items[k];
-			
-			if (k === 0) {
-				
-				k$3='as$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('b',4096,t$2,null,null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$as || (t$3.$as={});
-				(v$3=("" + c),v$3===c$3.at || (c$3.at_ = t$3.insert$(c$3.at=v$3,0,c$3.at_)));
-				t$2.push(t$3,k$2++,k$3);
-			} else {
-				
-				k$3='au$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('b',4096,t$2,null,null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$au || (t$3.$au={});
-				(v$3=(", " + c),v$3===c$3.av || (c$3.av_ = t$3.insert$(c$3.av=v$3,0,c$3.av_)));
+				c$3=t$3.$af || (t$3.$af={});
+				(v$3=this.resultClasses,v$3===c$3.ah||(d$3|=2,c$3.ah=v$3));
+				(d$3&2 && t$3.flag$((c$3.ah||'')));
+				t$4 = c$3.ai || (c$3.ai = t$4=imba.createElement('div',4096,t$3,null,null,'ie0370096'));
+				(v$4=object.eng,v$4===c$3.aj || (c$3.aj_ = t$4.insert$(c$3.aj=v$4,0,c$3.aj_)));
+				t$4 = c$3.ak || (c$3.ak = t$4=imba.createElement('div',4096,t$3,null,null,'ie0370096'));
+				(v$4=object.cham,v$4===c$3.al || (c$3.al_ = t$4.insert$(c$3.al=v$4,0,c$3.al_)));
 				t$2.push(t$3,k$2++,k$3);
 			}		}t$2.end$(k$2);
 		t$0.close$(d$0);
 		return t$0;
 	}
-} imba.tags.define('result-word',ResultWordComponent,{});
+} imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
 
 /* css scoped
 
-# app-root {
-# }
-# app-root ul {
-# 	list-style-type: none;
-# 	margin: 0;
-# 	padding: 0 20px;
-# }
-# .dictCount {
-# 	width: 100%;
-# 	text-align: center;
-# 	padding: 5px;
-# }
-# .wordtotal {
-# 	text-align: center;
-# 	padding: 10px;
-# }
-# .vbox {
-# 	background-color: white;
-# }
-# .results > li {
-# 	padding: 10px;
-# 	padding-left: 10px;
-# 	border-bottom: 1px solid whitesmoke;
+app-root {
+}
+app-root ul {
+	list-style-type: none;
+	padding: 0 20px;
+}
 
-# }
-# .result ol {
-# 	list-style-type: upper-roman
-# }
-# .result-word {
-# }
-# .partOfSpeech {
-# 	color: #ccc;
-# 	font-weight: light
-# 	margin-bottom: 10px;
-# 	font-size: .9rem;	
-# }
-# .result ol li{
-# 	margin-bottom: 10px;
-# }
-.word > * {
-	display:none;
-}
-.show {
-	display: inline-block;
-}
 */
 
 
