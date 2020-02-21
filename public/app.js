@@ -1,5 +1,3 @@
-
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 function iter$(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var raf = (typeof requestAnimationFrame !== 'undefined') ? requestAnimationFrame : (function(blk) { return setTimeout(blk,1000 / 60); });
 
 // Scheduler
@@ -2414,33 +2412,109 @@ let dict = [
 	}}
 ];
 
-function fuzzysearch (needle, haystack) {
-  var tlen = haystack.length;
-  var qlen = needle.length;
-  if (qlen > tlen) {
-    return false;
-  }
-  if (qlen === tlen) {
-    return needle === haystack;
-  }
-  outer: for (var i = 0, j = 0; i < qlen; i++) {
-    var nch = needle.charCodeAt(i);
-    while (j < tlen) {
-      if (haystack.charCodeAt(j++) === nch) {
-        continue outer;
-      }
-    }
-    return false;
-  }
-  return true;
+var $1 = new WeakMap();
+class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
+	static init$(){
+		
+		return this;
+	}
+	init$(){
+		super.init$();return undefined;
+	}
+	
+	// Search aov (array > object > value)
+	// in app-root
+	set state(value) {
+		return $1.set(this,value);
+	}
+	get state() {
+		return $1.has(this) ? $1.get(this) : '';
+	}
+	render(){
+		var t$0, c$0, b$0, d$0, t$1, b$1, d$1, v$1;
+		
+		t$0=this;
+		t$0.open$();
+		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
+		t$1 = (b$1=d$1=1,c$0.b) || (b$1=d$1=0,c$0.b=t$1=imba.createElement('input',512,t$0,null,null,null));
+		v$1=c$0.c || (c$0.c=t$1.bind$('model',[this,'state']));
+		(v$1=this.inputClasses,v$1===c$0.e||(d$1|=2,c$0.e=v$1));
+		b$1 || (t$1.placeholder="type something");
+		(d$1&2 && t$1.flag$((c$0.e||'')));
+		b$1 || !t$1.setup || t$1.setup(d$1);
+		t$1.end$(d$1);
+		t$0.close$(d$0);
+		return t$0;
+	}
+} SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
+
+function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }// This fuzzy search can help Chico find his feather in a haystack.
+// meet chico: http://chico.tirado.app
+function fuzzyFeather(feather,haystack){
+	
+	let haystackLength = haystack.length;
+	let featherLength = feather.length;
+	if (featherLength > haystackLength) {
+		
+		return false;
+	}	if (featherLength === haystackLength) {
+		
+		return feather === haystack;
+	}	
+	let featherLetter = 0;
+	while (featherLetter < featherLength){
+		
+		let haystackLetter = 0;
+		let match = false;
+		var featherLetterCode = feather.charCodeAt(featherLetter++);
+		
+		while (haystackLetter < haystackLength){
+			
+			if (haystack.charCodeAt(haystackLetter++) === featherLetterCode) {
+				
+				match = true;break;
+			}		}		if (match) { continue; }		return false;
+	}	return true;
 }
+class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
+	
+	// Search aov results
+	// in app-root
+	render(){
+		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, v$4;
+		
+		t$0=this;
+		t$0.open$();
+		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
+		t$1 = c$0.b || (c$0.b = t$1=imba.createElement('ul',2048,t$0,null,null,null));
+		t$2 = c$0.c || (c$0.c = t$2 = imba.createKeyedFragment(1024,t$1));
+		k$2 = 0;
+		c$2=t$2.$;
+		for (let i = 0, items = iter$$5(this.arr), len = items.length; i < len; i++) {
+			let object = items[i];
+			
+			// object.keywords().toLowerCase().includes(@state.toLowerCase())
+			if (fuzzyFeather(this.state,object.eng) || fuzzyFeather(this.state,object.cham)) {
+				
+				k$3='d$' + k$2;
+				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,null));
+				b$3||(t$3.up$=t$2);
+				c$3=t$3.$d || (t$3.$d={});
+				(v$3=this.resultClasses,v$3===c$3.f||(d$3|=2,c$3.f=v$3));
+				(d$3&2 && t$3.flag$((c$3.f||'')));
+				t$4 = c$3.g || (c$3.g = t$4=imba.createElement('div',4096,t$3,null,null,null));
+				(v$4=object.eng,v$4===c$3.h || (c$3.h_ = t$4.insert$(c$3.h=v$4,0,c$3.h_)));
+				t$4 = c$3.i || (c$3.i = t$4=imba.createElement('div',4096,t$3,null,null,null));
+				(v$4=object.cham,v$4===c$3.j || (c$3.j_ = t$4.insert$(c$3.j=v$4,0,c$3.j_)));
+				t$2.push(t$3,k$2++,k$3);
+			}		}t$2.end$(k$2);
+		t$0.close$(d$0);
+		return t$0;
+	}
+} imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
 
-var fuzzysearch_1 = fuzzysearch;
-
-imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n# html,body{# width:100%;# height:100%;# margin:0px;# font-family:Arial;}# body{# display:block;# font-size:14px;# align-items:stretch;# justify-content:center;# flex-direction:column;# background:whitesmoke;# padding:30px;# min-height:80vh;}# body,div,form,header,footer,section,input,button,nav,aside,article{# box-sizing:border-box;}# div,section,input,ul,main,article,.grow{# flex:1 1 auto;}# input{# display:block;# padding:0px 12px;# background:transparent;# border:none;# font-size:inherit;# width:50px;# height:24px;}# header,footer{# flex:0 0 auto;# display:flex;# flex-direction:row;# justify-content:flex-start;# align-items:center;# padding:10px 6px;# background:#e8e8e8;}\n");
-function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1 = new WeakMap(), $2 = new WeakMap(), $3 = new WeakMap();
-// import fuzzy from './fuzzy.imba'
-console.log(fuzzysearch_1('ee',"wheel"));
+imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n");
+var $1$1 = new WeakMap(), $2 = new WeakMap();
 let search = "";
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
@@ -2453,10 +2527,10 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	}
 	
 	set containerWidth(value) {
-		return $1.set(this,value);
+		return $1$1.set(this,value);
 	}
 	get containerWidth() {
-		return $1.has(this) ? $1.get(this) : "container max-w-screen-md mx-auto block";
+		return $1$1.has(this) ? $1$1.get(this) : "container max-w-screen-md mx-auto block";
 	}
 	set query(value) {
 		return $2.set(this,value);
@@ -2509,140 +2583,13 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 		return t$0;
 	}
 } AppRootComponent.init$(); imba.tags.define('app-root',AppRootComponent,{});
-class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
-	static init$(){
-		
-		return this;
-	}
-	init$(){
-		super.init$();
-		return this.setAttribute('data-ie0370096','');
-	}
-	
-	// Search aov (array > object > value)
-	// in app-root
-	set state(value) {
-		return $3.set(this,value);
-	}
-	get state() {
-		return $3.has(this) ? $3.get(this) : '';
-	}
-	render(){
-		var t$0, c$0, b$0, d$0, t$1, b$1, d$1, v$1;
-		
-		t$0=this;
-		t$0.open$();
-		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
-		t$1 = (b$1=d$1=1,c$0.z) || (b$1=d$1=0,c$0.z=t$1=imba.createElement('input',512,t$0,null,null,'ie0370096'));
-		v$1=c$0.aa || (c$0.aa=t$1.bind$('model',[this,'state']));
-		(v$1=this.inputClasses,v$1===c$0.ac||(d$1|=2,c$0.ac=v$1));
-		b$1 || (t$1.on$(`kplaceholder`,{},this));
-		(d$1&2 && t$1.flag$((c$0.ac||'')));
-		b$1 || !t$1.setup || t$1.setup(d$1);
-		t$1.end$(d$1);
-		t$0.close$(d$0);
-		return t$0;
-	}
-} SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
-
-class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
-	init$(){
-		super.init$();return this.setAttribute('data-ie0370096','');
-	}
-	
-	// Search aov results
-	// in app-root
-	render(){
-		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, v$4;
-		
-		t$0=this;
-		t$0.open$();
-		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
-		t$1 = c$0.ad || (c$0.ad = t$1=imba.createElement('ul',2048,t$0,null,null,'ie0370096'));
-		t$2 = c$0.ae || (c$0.ae = t$2 = imba.createKeyedFragment(1024,t$1));
-		k$2 = 0;
-		c$2=t$2.$;
-		for (let i = 0, items = iter$$5(this.arr), len = items.length; i < len; i++) {
-			let object = items[i];
-			
-			// object.keywords().toLowerCase().includes(@state.toLowerCase())
-			if (fuzzysearch_1(this.state,object.eng) || fuzzysearch_1(this.state,object.cham)) {
-				
-				k$3='af$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,'ie0370096'));
-				b$3||(t$3.up$=t$2);
-				c$3=t$3.$af || (t$3.$af={});
-				(v$3=this.resultClasses,v$3===c$3.ah||(d$3|=2,c$3.ah=v$3));
-				(d$3&2 && t$3.flag$((c$3.ah||'')));
-				t$4 = c$3.ai || (c$3.ai = t$4=imba.createElement('div',4096,t$3,null,null,'ie0370096'));
-				(v$4=object.eng,v$4===c$3.aj || (c$3.aj_ = t$4.insert$(c$3.aj=v$4,0,c$3.aj_)));
-				t$4 = c$3.ak || (c$3.ak = t$4=imba.createElement('div',4096,t$3,null,null,'ie0370096'));
-				(v$4=object.cham,v$4===c$3.al || (c$3.al_ = t$4.insert$(c$3.al=v$4,0,c$3.al_)));
-				t$2.push(t$3,k$2++,k$3);
-			}		}t$2.end$(k$2);
-		t$0.close$(d$0);
-		return t$0;
-	}
-} imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
 
 /* css scoped
-
 app-root {
 }
 app-root ul {
 	list-style-type: none;
 	padding: 0 20px;
 }
-
-*/
-
-
-/* css
-# html,body {
-#     width: 100%;
-#     height: 100%;
-#     margin: 0px;
-#     font-family: Arial;
-# }
-
-# body {
-#     display: block;
-#     font-size: 14px;
-#     align-items: stretch;
-#     justify-content: center;
-#     flex-direction: column;
-#     background: whitesmoke;
-#     padding: 30px;
-# 	min-height: 80vh;
-# }
-
-# body,div,form,header,footer,section,input,button,nav,aside,article {
-#     box-sizing: border-box;
-# }
-
-# div,section,input,ul,main,article,.grow {
-#     flex: 1 1 auto;
-# }
-
-# input {
-#     display: block;
-#     padding: 0px 12px;
-#     background: transparent;
-#     border: none;
-#     font-size: inherit;
-#     width: 50px;
-#     height: 24px;
-# }
-
-# header,footer {
-#     flex: 0 0 auto;
-#     display: flex;
-#     flex-direction: row;
-#     justify-content: flex-start;
-#     align-items: center;
-#     padding: 10px 6px;
-#     background: #e8e8e8;
-# }
-
 */
 //# sourceMappingURL=app.js.map

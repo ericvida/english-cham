@@ -1,6 +1,6 @@
 import {dict} from './dict.imba'
-import fuzzysearch from 'fuzzysearch'
-# import fuzzy from './fuzzy.imba'
+import search-aov from './components/search-aov'
+import search-aov-results from './components/search-aov-results'
 let search = ""
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
@@ -19,83 +19,12 @@ tag app-root
 				<div .{@containerWidth}.flex>
 					<search-aov-results.w-full resultClasses="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between" 
 						arr=dict bind:state=search>
-tag search-aov
-	# Search aov (array > object > value)
-	# in app-root
-	@state = ''
-	def render
-		<self>
-			<input[@state].{@inputClasses} placeholder="type something">
-
-tag search-aov-results
-	# Search aov results
-	# in app-root
-	def render
-		<self>
-			<ul>
-				for object in @arr
-					# object.keywords().toLowerCase().includes(@state.toLowerCase())
-					if fuzzysearch(@state, object.eng) or fuzzysearch(@state, object.cham)
-						<li.{@resultClasses}> 
-							<div> object.eng
-							<div> object.cham
 
 ### css scoped
-
 app-root {
 }
 app-root ul {
 	list-style-type: none;
 	padding: 0 20px;
 }
-
-###
-
-### css
-# html,body {
-#     width: 100%;
-#     height: 100%;
-#     margin: 0px;
-#     font-family: Arial;
-# }
-
-# body {
-#     display: block;
-#     font-size: 14px;
-#     align-items: stretch;
-#     justify-content: center;
-#     flex-direction: column;
-#     background: whitesmoke;
-#     padding: 30px;
-# 	min-height: 80vh;
-# }
-
-# body,div,form,header,footer,section,input,button,nav,aside,article {
-#     box-sizing: border-box;
-# }
-
-# div,section,input,ul,main,article,.grow {
-#     flex: 1 1 auto;
-# }
-
-# input {
-#     display: block;
-#     padding: 0px 12px;
-#     background: transparent;
-#     border: none;
-#     font-size: inherit;
-#     width: 50px;
-#     height: 24px;
-# }
-
-# header,footer {
-#     flex: 0 0 auto;
-#     display: flex;
-#     flex-direction: row;
-#     justify-content: flex-start;
-#     align-items: center;
-#     padding: 10px 6px;
-#     background: #e8e8e8;
-# }
-
 ###
