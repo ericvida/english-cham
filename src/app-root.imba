@@ -2,6 +2,7 @@ import {dict} from './dict.imba'
 import search-aov from './components/search-aov'
 import search-aov-results from './components/search-aov-results'
 let search = ""
+let keysofObject = ["eng","cham"]
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
 	@query = ''
@@ -18,7 +19,7 @@ tag app-root
 					<search-aov bind:state=search inputClasses="flex-1 rounded-md py-2 px-4 w-full shadow-inner">
 				<div .{@containerWidth}.flex>
 					<search-aov-results.w-full resultClasses="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between" 
-						arr=dict bind:state=search>
+						arr=dict bind:state=search keys=keysofObject>
 
 ### css scoped
 app-root {

@@ -1,3 +1,5 @@
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 function iter$(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var raf = (typeof requestAnimationFrame !== 'undefined') ? requestAnimationFrame : (function(blk) { return setTimeout(blk,1000 / 60); });
 
 // Scheduler
@@ -2448,7 +2450,7 @@ class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
 	}
 } SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
 
-function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }// This fuzzy search can help Chico find his feather in a haystack.
+// This fuzzy search can help Chico find his feather in a haystack.
 // meet chico: http://chico.tirado.app
 function fuzzyFeather(feather,haystack){
 	
@@ -2476,12 +2478,28 @@ function fuzzyFeather(feather,haystack){
 			}		}		if (match) { continue; }		return false;
 	}	return true;
 }
+
+function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1$1 = new WeakMap();
+
 class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
+	static init$(){
+		
+		return this;
+	}
+	init$(){
+		super.init$();return undefined;
+	}
 	
 	// Search aov results
 	// in app-root
+	set key(value) {
+		return $1$1.set(this,value);
+	}
+	get key() {
+		return $1$1.get(this);
+	}
 	render(){
-		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, v$4;
+		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, k$4, c$4, t$5, b$5, d$5, c$5, v$5;
 		
 		t$0=this;
 		t$0.open$();
@@ -2497,25 +2515,34 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 			if (fuzzyFeather(this.state,object.eng) || fuzzyFeather(this.state,object.cham)) {
 				
 				k$3='d$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,null,null,null));
+				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',2560,t$2,null,null,null));
 				b$3||(t$3.up$=t$2);
 				c$3=t$3.$d || (t$3.$d={});
 				(v$3=this.resultClasses,v$3===c$3.f||(d$3|=2,c$3.f=v$3));
 				(d$3&2 && t$3.flag$((c$3.f||'')));
-				t$4 = c$3.g || (c$3.g = t$4=imba.createElement('div',4096,t$3,null,null,null));
-				(v$4=object.eng,v$4===c$3.h || (c$3.h_ = t$4.insert$(c$3.h=v$4,0,c$3.h_)));
-				t$4 = c$3.i || (c$3.i = t$4=imba.createElement('div',4096,t$3,null,null,null));
-				(v$4=object.cham,v$4===c$3.j || (c$3.j_ = t$4.insert$(c$3.j=v$4,0,c$3.j_)));
+				t$4 = c$3.g || (c$3.g = t$4 = imba.createIndexedFragment(0,t$3));
+				k$4 = 0;
+				c$4=t$4.$;
+				for (let j = 0, ary = iter$$5(this.keys), len = ary.length; j < len; j++) {
+					let key = ary[j];
+					
+					t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('div',4096,t$4,null,null,null));
+					b$5||(t$5.up$=t$4);
+					c$5=t$5.$h || (t$5.$h={});
+					(v$5=object[key],v$5===c$5.i || (c$5.i_ = t$5.insert$(c$5.i=v$5,0,c$5.i_)));
+					k$4++;
+				}t$4.end$(k$4);
 				t$2.push(t$3,k$2++,k$3);
 			}		}t$2.end$(k$2);
 		t$0.close$(d$0);
 		return t$0;
 	}
-} imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
+} SearchAovResultsComponent.init$(); imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
 
 imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n");
-var $1$1 = new WeakMap(), $2 = new WeakMap();
+var $1$2 = new WeakMap(), $2 = new WeakMap();
 let search = "";
+let keysofObject = ["eng","cham"];
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
 		
@@ -2527,10 +2554,10 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	}
 	
 	set containerWidth(value) {
-		return $1$1.set(this,value);
+		return $1$2.set(this,value);
 	}
 	get containerWidth() {
-		return $1$1.has(this) ? $1$1.get(this) : "container max-w-screen-md mx-auto block";
+		return $1$2.has(this) ? $1$2.get(this) : "container max-w-screen-md mx-auto block";
 	}
 	set query(value) {
 		return $2.set(this,value);
@@ -2576,6 +2603,7 @@ class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 		b$3 || (t$3.resultClasses="py-2 px-4 bg-white mb-2 shadow-sm rounded-md w-full flex justify-between");
 		(v$3=dict,v$3===c$0.x || (t$3.arr=c$0.x=v$3));
 		b$3 || t$3.bind$('state',{get:function(){ return search },set:function(v$){ search = v$; }});
+		(v$3=keysofObject,v$3===c$0.z || (t$3.keys=c$0.z=v$3));
 		b$3 || !t$3.setup || t$3.setup(d$3);
 		t$3.end$(d$3);
 		b$3 || t$3.insertInto$(t$2);
