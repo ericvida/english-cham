@@ -9,8 +9,8 @@
     "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
     "fuzzysearch": "^1.0.3",
-    "imba": "^2.0.0-alpha.28",
-    "imba-rollup": "^1.0.4",
+    "imba": "^2.0.0-alpha.34",
+    "imba-rollup": "^2.0.0-alpha.31",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   },

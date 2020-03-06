@@ -1,4 +1,5 @@
-import {fuzzyFeather} from './fuzzySearch'
+
+import {fuzzySearch} from './fuzzySearch'
 
 tag search-aov-results
 	# Search aov results
@@ -9,7 +10,7 @@ tag search-aov-results
 			<ul>
 				for object in @arr
 					# object.keywords().toLowerCase().includes(@state.toLowerCase())
-					if fuzzyFeather(@state, object.eng) or fuzzyFeather(@state, object.cham)
+					if fuzzySearch(@state, object.eng) or fuzzySearch(@state, object.cham)
 						<li.{@resultClasses}> 
 							for key in @keys
 								<div> object[key]

@@ -3,6 +3,7 @@ import search-aov from './components/search-aov'
 import search-aov-results from './components/search-aov-results'
 let search = ""
 let keysofObject = ["eng","cham"]
+
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
 	@query = ''

@@ -27,7 +27,7 @@ class Scheduler {
 			
 			this.queue.push(item);
 		}		
-		if (!this.scheduled) { return this.schedule() }	}
+		if (!(this.scheduled)) { return this.schedule() }	}
 	
 	listen(ns,item){
 		
@@ -50,7 +50,7 @@ class Scheduler {
 		var self = this;
 		
 		var items = this.queue;
-		if (!this.ts) { this.ts = timestamp; }		this.dt = timestamp - this.ts;
+		if (!(this.ts)) { this.ts = timestamp; }		this.dt = timestamp - this.ts;
 		this.ts = timestamp;
 		this.queue = [];
 		this.stage = 1;
@@ -85,7 +85,7 @@ class Scheduler {
 	
 	schedule(){
 		
-		if (!this.scheduled) {
+		if (!(this.scheduled)) {
 			
 			this.scheduled = true;
 			if (this.stage == -1) {
@@ -97,7 +97,9 @@ class Scheduler {
 }
 
 function iter$$1(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function extend$(target,ext){
+	// @ts-ignore
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
+	// @ts-ignore
 	Object.defineProperties(target.prototype,descriptors);
 	return target;
 }const keyCodes = {
@@ -204,8 +206,12 @@ class EventHandler {
 			let res = undefined;
 			let context = null;
 			
-			// parse the arguments
-			if (val instanceof Array) {
+			if (handler[0] == '$' && handler[1] == '_' && (val[0] instanceof Function)) {
+				
+				handler = val[0];
+				args = [event,state].concat(val.slice(1));
+				context = element;
+			} else if (val instanceof Array) {
 				
 				args = val.slice();
 				
@@ -237,7 +243,7 @@ class EventHandler {
 				event.preventDefault();
 			} else if (handler == 'ctrl') {
 				
-				if (!event.ctrlKey) { break; }			} else if (handler == 'commit') {
+				if (!(event.ctrlKey)) { break; }			} else if (handler == 'commit') {
 				
 				commit = true;
 			} else if (handler == 'silence') {
@@ -245,11 +251,11 @@ class EventHandler {
 				commit = false;
 			} else if (handler == 'alt') {
 				
-				if (!event.altKey) { break; }			} else if (handler == 'shift') {
+				if (!(event.altKey)) { break; }			} else if (handler == 'shift') {
 				
-				if (!event.shiftKey) { break; }			} else if (handler == 'meta') {
+				if (!(event.shiftKey)) { break; }			} else if (handler == 'meta') {
 				
-				if (!event.metaKey) { break; }			} else if (handler == 'self') {
+				if (!(event.metaKey)) { break; }			} else if (handler == 'self') {
 				
 				if (target != element) { break; }			} else if (handler == 'once') {
 				
@@ -288,13 +294,12 @@ class EventHandler {
 					
 					context = this.getHandlerForMethod(element,handler);
 				}			}			
-			
-			if (context) {
+			if (handler instanceof Function) {
+				
+				res = handler.apply(context || element,args);
+			} else if (context) {
 				
 				res = context[handler].apply(context,args);
-			} else if (handler instanceof Function) {
-				
-				res = handler.apply(element,args);
 			}			
 			if (res && (res.then instanceof Function)) {
 				
@@ -319,7 +324,9 @@ class EventHandler {
 var {Document: Document,Node: Node$1,Text: Text$1,Comment: Comment$1,Element: Element$1,SVGElement: SVGElement,HTMLElement: HTMLElement$1,DocumentFragment: DocumentFragment,ShadowRoot: ShadowRoot$1,Event: Event$1,CustomEvent: CustomEvent$1,MouseEvent: MouseEvent,document: document$1} = window;
 
 function iter$$2(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function extend$$1(target,ext){
+	// @ts-ignore
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
+	// @ts-ignore
 	Object.defineProperties(target.prototype,descriptors);
 	return target;
 }
@@ -351,7 +358,7 @@ extend$$1(DocumentFragment,{
 	// a single text node
 	text$(item){
 		
-		if (!this.__text) {
+		if (!(this.__text)) {
 			
 			this.__text = this.insert$(item);
 		} else {
@@ -374,7 +381,7 @@ extend$$1(DocumentFragment,{
 	
 	insertInto$(parent,before){
 		
-		if (!this.__parent) {
+		if (!(this.__parent)) {
 			
 			this.__parent = parent;
 			// console.log 'insertFrgment into',parent,Array.from(@childNodes)
@@ -419,7 +426,7 @@ extend$$1(DocumentFragment,{
 });
 
 
-extend$$1(ShadowRoot,{
+extend$$1(ShadowRoot$1,{
 	
 	get parentContext(){
 		
@@ -434,7 +441,7 @@ class TagCollection {
 		this.__f = f;
 		this.__parent = parent;
 		
-		if (!(f & 128) && (this instanceof KeyedTagFragment)) {
+		if (!((f & 128)) && (this instanceof KeyedTagFragment)) {
 			
 			this.__start = document$1.createComment('start');
 			if (parent) { parent.appendChild$(this.__start); }		}		
@@ -478,7 +485,7 @@ class TagCollection {
 	
 	insertInto$(parent,before){
 		
-		if (!this.__parent) {
+		if (!(this.__parent)) {
 			
 			this.__parent = parent;
 			before ? before.insertBeforeBegin$(this.__end) : parent.appendChild$(this.__end);
@@ -488,7 +495,7 @@ class TagCollection {
 	
 	replace$(other){
 		
-		if (!this.__parent) {
+		if (!(this.__parent)) {
 			
 			this.__parent = other.parentNode;
 		}		other.replaceWith$(this.__end);
@@ -645,7 +652,7 @@ class IndexedTagFragment extends TagCollection {
 	end$(len){
 		
 		let from = this.length;
-		if (from == len || !this.__parent) { return }		let array = this.$;
+		if (from == len || !(this.__parent)) { return }		let array = this.$;
 		let par = this.__parent;
 		
 		if (from > len) {
@@ -697,7 +704,9 @@ function createKeyedFragment(bitflags,parent){
 }
 
 function extend$$2(target,ext){
+	// @ts-ignore
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
+	// @ts-ignore
 	Object.defineProperties(target.prototype,descriptors);
 	return target;
 }
@@ -730,11 +739,12 @@ extend$$2(SVGElement,{
 });
 
 function iter$$3(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function extend$$3(target,ext){
+	// @ts-ignore
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
+	// @ts-ignore
 	Object.defineProperties(target.prototype,descriptors);
 	return target;
 }var customElements_;
-
 var root = ((typeof window !== 'undefined') ? window : (((typeof global !== 'undefined') ? global : null)));
 
 var imba$1 = {
@@ -747,8 +757,8 @@ var imba$1 = {
 root.imba = imba$1;
 
 (customElements_ = root.customElements) || (root.customElements = {
-	define: function() { return console.log('no custom elements'); },
-	get: function() { return console.log('no custom elements'); }
+	define: function() { return true; },// console.log('no custom elements')
+	get: function() { return true; }// console.log('no custom elements')
 });
 
 imba$1.setTimeout = function(fn,ms) {
@@ -990,7 +1000,7 @@ extend$$3(Node,{
 	// replace this with something else
 	replaceWith$(other){
 		
-		if (!(other instanceof Node) && other.replace$) {
+		if (!((other instanceof Node)) && other.replace$) {
 			
 			other.replace$(this);
 		} else {
@@ -1166,9 +1176,10 @@ extend$$3(Element,{
 		
 		// if a tag receives flags from inside <self> we need to
 		// redefine the flag-methods to later use both
+		let existing = (this.__extflags || (this.__extflags = this.className));
 		this.flag$ = function(str) { return self.flagSync$(self.__extflags = str); };
 		this.flagSelf$ = function(str) { return self.flagSync$(self.__ownflags = str); };
-		this.className = (this.className || '') + ' ' + (this.__ownflags = str);
+		this.className = (existing ? (existing + ' ') : '') + (this.__ownflags = str);
 		return;
 	},
 	
@@ -1256,7 +1267,7 @@ class ImbaElement extends HTMLElement {
 	slot$(name,ctx){
 		var slots_;
 		
-		if (name == '__' && !this.render) {
+		if (name == '__' && !(this.render)) {
 			
 			return this;
 		}		
@@ -1414,7 +1425,9 @@ imba$1.createSVGElement = function (name,bitflags,parent,flags,text,sfc){
 // import './intersect'
 
 function iter$$4(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function extend$$4(target,ext){
+	// @ts-ignore
 	var descriptors = Object.getOwnPropertyDescriptors(ext);
+	// @ts-ignore
 	Object.defineProperties(target.prototype,descriptors);
 	return target;
 }var isGroup = function(obj) {
@@ -2450,36 +2463,23 @@ class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
 	}
 } SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
 
-// This fuzzy search can help Chico find his feather in a haystack.
-// meet chico: http://chico.tirado.app
-function fuzzyFeather(feather,haystack){
+function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function fuzzySearch(feather,haystack){
+	var res;
 	
-	let haystackLength = haystack.length;
-	let featherLength = feather.length;
-	if (featherLength > haystackLength) {
+	if (feather.length > haystack.length) { return false }	if (feather.length == haystack.length) { return feather === haystack }	for (let i = 0, items = iter$$5(feather), len = items.length; i < len; i++) {
+		let featherLetter = items[i];
 		
-		return false;
-	}	if (featherLength === haystackLength) {
-		
-		return feather === haystack;
-	}	
-	let featherLetter = 0;
-	while (featherLetter < featherLength){
-		
-		let haystackLetter = 0;
-		let match = false;
-		var featherLetterCode = feather.charCodeAt(featherLetter++);
-		
-		while (haystackLetter < haystackLength){
-			
-			if (haystack.charCodeAt(haystackLetter++) === featherLetterCode) {
-				
-				match = true;break;
-			}		}		if (match) { continue; }		return false;
+		res = [];
+		for (let j = 0, ary = iter$$5(haystack), len = ary.length; j < len; j++) {
+			let haystackLetter = ary[j];
+			if (!(haystackLetter === featherLetter)) { continue; }			
+			res.push(true);break;
+		}		let match = res;
+		if (match.length) { continue; }		return false;
 	}	return true;
 }
 
-function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1$1 = new WeakMap();
+function iter$$6(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1$1 = new WeakMap();
 
 class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
@@ -2508,11 +2508,11 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 		t$2 = c$0.c || (c$0.c = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
-		for (let i = 0, items = iter$$5(this.arr), len = items.length; i < len; i++) {
+		for (let i = 0, items = iter$$6(this.arr), len = items.length; i < len; i++) {
 			let object = items[i];
 			
 			// object.keywords().toLowerCase().includes(@state.toLowerCase())
-			if (fuzzyFeather(this.state,object.eng) || fuzzyFeather(this.state,object.cham)) {
+			if (fuzzySearch(this.state,object.eng) || fuzzySearch(this.state,object.cham)) {
 				
 				k$3='d$' + k$2;
 				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',2560,t$2,null,null,null));
@@ -2523,7 +2523,7 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 				t$4 = c$3.g || (c$3.g = t$4 = imba.createIndexedFragment(0,t$3));
 				k$4 = 0;
 				c$4=t$4.$;
-				for (let j = 0, ary = iter$$5(this.keys), len = ary.length; j < len; j++) {
+				for (let j = 0, ary = iter$$6(this.keys), len = ary.length; j < len; j++) {
 					let key = ary[j];
 					
 					t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('div',4096,t$4,null,null,null));
@@ -2543,6 +2543,7 @@ imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20
 var $1$2 = new WeakMap(), $2 = new WeakMap();
 let search = "";
 let keysofObject = ["eng","cham"];
+
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
 		
