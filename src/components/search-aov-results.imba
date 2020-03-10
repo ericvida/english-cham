@@ -1,6 +1,6 @@
 
 import {fuzzySearch} from './fuzzySearch'
-
+# TODO: make it so people can find  special symbols like ɔɔ or ɑɑ. ATM they are not searchable.
 tag search-aov-results
 	# Search aov results
 	# in app-root

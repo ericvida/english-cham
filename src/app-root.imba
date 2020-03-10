@@ -1,9 +1,8 @@
 import {dict} from './dict.imba'
 import './components/search-aov'
 import './components/search-aov-results'
-let search = "iaq"
+let search = ""
 let keysofObject = ["eng","cham"]
-
 tag app-root
 	@containerWidth = "container max-w-screen-md mx-auto block"
 	@query = ''
