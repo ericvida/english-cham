@@ -2395,7 +2395,7 @@ let dict = [
 		
 		return this.eng + this.cham;
 	}},
-	{cham: "myeai, mayeai, mayay",
+	{cham: "mayeai, m'yeai",
 	eng: "to speak, to talk",
 	khmer: "niyeay",
 	def: '',
@@ -2424,7 +2424,29 @@ let dict = [
 	keywords: function() {
 		
 		return this.eng + this.cham;
-	}}
+	}},
+	{cham: "leaiq",
+	eng: "to say, that",
+	khmer: "thaa",
+	def: '(v) to say something, or that.',
+	partOfSpeech: "verb",
+	chapter: 3,
+	keywords: function() {
+		
+		return this.eng + this.cham;
+	}},
+	{cham: "iaq",
+	eng: "to look, to observe",
+	khmer: "",
+	def: '(v) to look, or to observice someone or something',
+	partOfSpeech: "verb",
+	chapter: 3},
+	{cham: "ŋaq",
+	eng: "to do",
+	khmer: "",
+	def: '(v) to do',
+	partOfSpeech: "verb",
+	chapter: 3}
 ];
 
 var $1 = new WeakMap();
@@ -2463,23 +2485,35 @@ class SearchAovComponent extends imba.tags.get('component','ImbaElement') {
 	}
 } SearchAovComponent.init$(); imba.tags.define('search-aov',SearchAovComponent,{});
 
-function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }function fuzzySearch(feather,haystack){
-	var res;
+// This fuzzy search can help Chico find his feather in a haystack.
+// meet chico: http://chico.tirado.app
+function fuzzySearch(feather,haystack){
 	
-	if (feather.length > haystack.length) { return false }	if (feather.length == haystack.length) { return feather === haystack }	for (let i = 0, items = iter$$5(feather), len = items.length; i < len; i++) {
-		let featherLetter = items[i];
+	let haystackLength = haystack.length;
+	let featherLength = feather.length;
+	if (featherLength > haystackLength) {
 		
-		res = [];
-		for (let j = 0, ary = iter$$5(haystack), len = ary.length; j < len; j++) {
-			let haystackLetter = ary[j];
-			if (!(haystackLetter === featherLetter)) { continue; }			
-			res.push(true);break;
-		}		let match = res;
-		if (match.length) { continue; }		return false;
+		return false;
+	}	if (featherLength === haystackLength) {
+		
+		return feather === haystack;
+	}	let featherLetter = 0;
+	while (featherLetter < featherLength){
+		
+		let haystackLetter = 0;
+		let match = false;
+		var featherLetterCode = feather.charCodeAt(featherLetter++);
+		while (haystackLetter < haystackLength){
+			
+			if (haystack.charCodeAt(haystackLetter++) === featherLetterCode) {
+				
+				match = true;break;
+			}		}		if (match) { continue; }		return false;
 	}	return true;
 }
 
-function iter$$6(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1$1 = new WeakMap();
+imba.inlineStyles("ul[data-ia71f4167]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}li.top[data-ia71f4167]{-webkit-order:1;-ms-flex-order:1;order:1;padding-top:20px;padding-bottom:20px;}li[data-ia71f4167]{-webkit-order:2;-ms-flex-order:2;order:2;}\n");
+function iter$$5(a){ return a ? (a.toIterable ? a.toIterable() : a) : []; }var $1$1 = new WeakMap();
 
 class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement') {
 	static init$(){
@@ -2487,7 +2521,8 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 		return this;
 	}
 	init$(){
-		super.init$();return undefined;
+		super.init$();
+		return this.setAttribute('data-ia71f4167','');
 	}
 	
 	// Search aov results
@@ -2499,49 +2534,99 @@ class SearchAovResultsComponent extends imba.tags.get('component','ImbaElement')
 		return $1$1.get(this);
 	}
 	render(){
-		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, k$4, c$4, t$5, b$5, d$5, c$5, v$5;
+		var t$0, c$0, b$0, d$0, t$1, t$2, k$2, c$2, t$3, k$3, b$3, d$3, c$3, v$3, t$4, v$4, k$4, c$4, t$5, b$5, d$5, c$5, v$5;
 		
 		t$0=this;
 		t$0.open$();
 		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
-		t$1 = c$0.b || (c$0.b = t$1=imba.createElement('ul',2048,t$0,null,null,null));
+		t$1 = c$0.b || (c$0.b = t$1=imba.createElement('ul',2048,t$0,'list',null,'ia71f4167'));
 		t$2 = c$0.c || (c$0.c = t$2 = imba.createKeyedFragment(1024,t$1));
 		k$2 = 0;
 		c$2=t$2.$;
-		for (let i = 0, items = iter$$6(this.arr), len = items.length; i < len; i++) {
+		for (let i = 0, items = iter$$5(this.arr), len = items.length; i < len; i++) {
 			let object = items[i];
 			
 			// object.keywords().toLowerCase().includes(@state.toLowerCase())
-			if (fuzzySearch(this.state,object.eng) || fuzzySearch(this.state,object.cham)) {
+			if (object.cham === this.state || object.eng === this.state) {
 				
 				k$3='d$' + k$2;
-				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',2560,t$2,null,null,null));
+				t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',512,t$2,'top',null,'ia71f4167'));
 				b$3||(t$3.up$=t$2);
 				c$3=t$3.$d || (t$3.$d={});
 				(v$3=this.resultClasses,v$3===c$3.f||(d$3|=2,c$3.f=v$3));
-				(d$3&2 && t$3.flag$((c$3.f||'')));
-				t$4 = c$3.g || (c$3.g = t$4 = imba.createIndexedFragment(0,t$3));
-				k$4 = 0;
-				c$4=t$4.$;
-				for (let j = 0, ary = iter$$6(this.keys), len = ary.length; j < len; j++) {
-					let key = ary[j];
-					
-					t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('div',4096,t$4,null,null,null));
-					b$5||(t$5.up$=t$4);
-					c$5=t$5.$h || (t$5.$h={});
-					(v$5=object[key],v$5===c$5.i || (c$5.i_ = t$5.insert$(c$5.i=v$5,0,c$5.i_)));
-					k$4++;
-				}t$4.end$(k$4);
+				(d$3&2 && t$3.flag$('top'+' '+(c$3.f||'')));
+				t$4 = c$3.g || (c$3.g = t$4=imba.createElement('div',4096,t$3,null,null,'ia71f4167'));
+				(v$4=object.eng,v$4===c$3.h || (c$3.h_ = t$4.insert$(c$3.h=v$4,0,c$3.h_)));
+				t$4 = c$3.i || (c$3.i = t$4=imba.createElement('div',4096,t$3,null,null,'ia71f4167'));
+				(v$4=object.cham,v$4===c$3.j || (c$3.j_ = t$4.insert$(c$3.j=v$4,0,c$3.j_)));
 				t$2.push(t$3,k$2++,k$3);
-			}		}t$2.end$(k$2);
+			} else {
+				
+				if (fuzzySearch(this.state,object.eng)) {
+					
+					k$3='k$' + k$2;
+					t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',2560,t$2,null,null,'ia71f4167'));
+					b$3||(t$3.up$=t$2);
+					c$3=t$3.$k || (t$3.$k={});
+					(v$3=this.resultClasses,v$3===c$3.m||(d$3|=2,c$3.m=v$3));
+					(d$3&2 && t$3.flag$((c$3.m||'')));
+					t$4 = c$3.n || (c$3.n = t$4 = imba.createIndexedFragment(0,t$3));
+					k$4 = 0;
+					c$4=t$4.$;
+					for (let j = 0, ary = iter$$5(this.keys), len = ary.length; j < len; j++) {
+						let key = ary[j];
+						
+						t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('div',4096,t$4,null,null,'ia71f4167'));
+						b$5||(t$5.up$=t$4);
+						c$5=t$5.$o || (t$5.$o={});
+						(v$5=object[key],v$5===c$5.p || (c$5.p_ = t$5.insert$(c$5.p=v$5,0,c$5.p_)));
+						k$4++;
+					}t$4.end$(k$4);
+					t$2.push(t$3,k$2++,k$3);
+				} else if (fuzzySearch(this.state,object.cham)) {
+					
+					k$3='q$' + k$2;
+					t$3 = (b$3=d$3=1,c$2[k$3]) || (b$3=d$3=0,c$2[k$3] = t$3=imba.createElement('li',2560,t$2,null,null,'ia71f4167'));
+					b$3||(t$3.up$=t$2);
+					c$3=t$3.$q || (t$3.$q={});
+					(v$3=this.resultClasses,v$3===c$3.s||(d$3|=2,c$3.s=v$3));
+					(d$3&2 && t$3.flag$((c$3.s||'')));
+					t$4 = c$3.t || (c$3.t = t$4 = imba.createIndexedFragment(0,t$3));
+					k$4 = 0;
+					c$4=t$4.$;
+					for (let j = 0, ary = iter$$5(this.keys), len = ary.length; j < len; j++) {
+						let key = ary[j];
+						
+						t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('div',4096,t$4,null,null,'ia71f4167'));
+						b$5||(t$5.up$=t$4);
+						c$5=t$5.$u || (t$5.$u={});
+						(v$5=object[key],v$5===c$5.v || (c$5.v_ = t$5.insert$(c$5.v=v$5,0,c$5.v_)));
+						k$4++;
+					}t$4.end$(k$4);
+					t$2.push(t$3,k$2++,k$3);
+				}			}		}t$2.end$(k$2);
 		t$0.close$(d$0);
 		return t$0;
 	}
 } SearchAovResultsComponent.init$(); imba.tags.define('search-aov-results',SearchAovResultsComponent,{});
+/* css scoped
+ul {
+	display: flex;
+	flex-direction: column;
+}
+li.top {
+	order: 1;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+li {
+	order: 2;
+}
+*/
 
 imba.inlineStyles("app-root ul[data-ie0370096]{list-style-type:none;padding:0 20px;}\n");
 var $1$2 = new WeakMap(), $2 = new WeakMap();
-let search = "";
+let search = "iaq";
 let keysofObject = ["eng","cham"];
 
 class AppRootComponent extends imba.tags.get('component','ImbaElement') {

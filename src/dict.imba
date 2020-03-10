@@ -603,7 +603,7 @@ export let dict = [
 	keywords: do
 		this.eng + this.cham
 	---
-	cham: "myeai, mayeai, mayay",
+	cham: "mayeai, m'yeai",
 	eng: "to speak, to talk",
 	khmer: "niyeay",
 	def: '',
@@ -629,4 +629,27 @@ export let dict = [
 	chapter: 1
 	keywords: do
 		this.eng + this.cham
+	---
+	cham: "leaiq",
+	eng: "to say, that",
+	khmer: "thaa",
+	def: '(v) to say something, or that.',
+	partOfSpeech: "verb",
+	chapter: 3
+	keywords: do
+		this.eng + this.cham
+	---
+	cham: "iaq",
+	eng: "to look, to observe",
+	khmer: "",
+	def: '(v) to look, or to observice someone or something',
+	partOfSpeech: "verb",
+	chapter: 3
+	---
+	cham: "ŋaq",
+	eng: "to do",
+	khmer: "",
+	def: '(v) to do',
+	partOfSpeech: "verb",
+	chapter: 3
 	]

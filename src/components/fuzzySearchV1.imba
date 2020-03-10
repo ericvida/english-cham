@@ -1,6 +1,6 @@
 # This fuzzy search can help Chico find his feather in a haystack.
 # meet chico: http://chico.tirado.app
-export def fuzzyFeather feather, haystack
+export def fuzzySearch feather, haystack
 	let haystackLength = haystack.length
 	let featherLength = feather.length
 	if featherLength > haystackLength
