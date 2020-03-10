@@ -1,5 +1,5 @@
 
-import {fuzzySearch} from './fuzzySearchV1'
+import {fuzzySearch} from './fuzzySearch'
 
 tag search-aov-results
 	# Search aov results
