@@ -1,0 +1,41 @@
+{
+  "scripts": {
+    "start": "npx snowpack dev",
+    "build": "npx snowpack build"
+  },
+  "snowpack": {
+    "mount": {
+      "src": "/dist",
+      "static": "/"
+    },
+    "devOptions": {
+      "out": "public",
+      "open": "default",
+      "bundle": true
+    },
+    "install": [
+      "localforage",
+      "fuse.js"
+    ],
+    "installOptions": {},
+    "buildOptions": {},
+    "plugins": [
+      [
+        "imba-snowpack",
+        {
+          "entrypoints": [
+            "app-root"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "imba-snowpack": "^0.0.6",
+    "snowpack": "^2.7.6"
+  },
+  "dependencies": {
+    "fuse.js": "^6.4.1",
+    "localforage": "^1.9.0"
+  }
+}
