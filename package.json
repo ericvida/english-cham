@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "start": "npx snowpack dev",
+    "build": "npx snowpack build",
+    "dev": "npx snowpack dev"
+  },
+  "snowpack": {
+    "mount": {
+      "src": "/dist",
+      "static": "/"
+    },
+    "devOptions": {
+      "out": "public",
+      "open": "default",
+      "bundle": true
+    },
+    "install": [],
+    "installOptions": {},
+    "buildOptions": {},
+    "plugins": [
+      [
+        "imba-snowpack",
+        {
+          "entrypoints": [
+            "app-root"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "imba-snowpack": "^0.0.8",
+    "snowpack": "^2.7.6"
+  }
+}
