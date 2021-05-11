@@ -827,11 +827,6 @@ imba@^2.0.0-alpha.77:
   resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.79.tgz#66f8c5aa230e2151f400c3d870f167f3172bd36f"
   integrity sha512-NA3idB61kY2n3CVWRt96N9gnkwXHpLukRFvRQO7mbPBNOlmqmBnW76mC57rmAMaRrzrBrAbL9175IEc5KwKb8Q==
 
-imba@^2.0.0-alpha.89:
-  version "2.0.0-alpha.89"
-  resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.89.tgz#94bfd112450c0eddd61a39eb7c55aaf89c3a2dbf"
-  integrity sha512-nJ1YsjAkHfxybx9cxSqfxodF1kQk3JmqPi0BeE8A+NyjrJPKhXW6o8eLvECS1m7ZsO+MiVfO/MVnwWUYtb2wAg==
-
 import-fresh@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
@@ -983,9 +978,9 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash@^4.15.0:
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lowercase-keys@^2.0.0:
   version "2.0.0"
