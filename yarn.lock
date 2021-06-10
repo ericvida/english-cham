@@ -827,11 +827,6 @@ imba@^2.0.0-alpha.77:
   resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.79.tgz#66f8c5aa230e2151f400c3d870f167f3172bd36f"
   integrity sha512-NA3idB61kY2n3CVWRt96N9gnkwXHpLukRFvRQO7mbPBNOlmqmBnW76mC57rmAMaRrzrBrAbL9175IEc5KwKb8Q==
 
-imba@^2.0.0-alpha.89:
-  version "2.0.0-alpha.89"
-  resolved "https://registry.yarnpkg.com/imba/-/imba-2.0.0-alpha.89.tgz#94bfd112450c0eddd61a39eb7c55aaf89c3a2dbf"
-  integrity sha512-nJ1YsjAkHfxybx9cxSqfxodF1kQk3JmqPi0BeE8A+NyjrJPKhXW6o8eLvECS1m7ZsO+MiVfO/MVnwWUYtb2wAg==
-
 import-fresh@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
@@ -1104,9 +1099,9 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
 normalize-url@^4.1.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
-  integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.1.tgz#0dd90cf1288ee1d1313b87081c9a5932ee48518a"
+  integrity sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==
 
 npm-run-path@^4.0.0, npm-run-path@^4.0.1:
   version "4.0.1"
